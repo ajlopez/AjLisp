@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EAE3E9D2-BCBB-49E5-9F78-20DDA5CE437F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AjLisp</RootNamespace>
+    <AssemblyName>AjLisp.Core</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compiler\Parser.cs" />
+    <Compile Include="Conversions.cs" />
+    <Compile Include="Language\IFunction.cs" />
+    <Compile Include="Language\IExpression.cs" />
+    <Compile Include="Language\RationalNumber.cs" />
+    <Compile Include="MacroUtilities.cs" />
+    <Compile Include="Numbers.cs" />
+    <Compile Include="Operations.cs" />
+    <Compile Include="Predicates.cs" />
+    <Compile Include="Primitives\SubrNilP.cs" />
+    <Compile Include="Primitives\FSubrBackquote.cs" />
+    <Compile Include="Primitives\FSubrTypeInvoke.cs" />
+    <Compile Include="Primitives\FSubrNew.cs" />
+    <Compile Include="Primitives\SubrInvoke.cs" />
+    <Compile Include="Primitives\FSubrUnaryOperation.cs" />
+    <Compile Include="Primitives\SubrUnaryOperation.cs" />
+    <Compile Include="Primitives\SubrBinaryOperation.cs" />
+    <Compile Include="Primitives\FSubr.cs" />
+    <Compile Include="Primitives\FSubrClosure.cs" />
+    <Compile Include="Primitives\FSubrCond.cs" />
+    <Compile Include="Primitives\FSubrDefine.cs" />
+    <Compile Include="Primitives\FSubrDefineF.cs" />
+    <Compile Include="Primitives\FSubrDefineM.cs" />
+    <Compile Include="Primitives\FSubrDefineN.cs" />
+    <Compile Include="Primitives\FSubrFExpr.cs" />
+    <Compile Include="Primitives\FSubrFLambda.cs" />
+    <Compile Include="Primitives\FSubrIf.cs" />
+    <Compile Include="Primitives\FSubrLambda.cs" />
+    <Compile Include="Primitives\FSubrLet.cs" />
+    <Compile Include="Primitives\FSubrLetS.cs" />
+    <Compile Include="Primitives\FSubrMacroClosure.cs" />
+    <Compile Include="Primitives\FSubrMExpr.cs" />
+    <Compile Include="Primitives\FSubrMLambda.cs" />
+    <Compile Include="Primitives\FSubrNLambda.cs" />
+    <Compile Include="Primitives\FSubrProgN.cs" />
+    <Compile Include="Primitives\FSubrQuote.cs" />
+    <Compile Include="Primitives\Subr.cs" />
+    <Compile Include="Compiler\Lexer.cs" />
+    <Compile Include="TypeUtilities.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="ValueEnvironment.cs" />
+    <Compile Include="Machine.cs" />
+    <Compile Include="Primitives\SubrAppend.cs" />
+    <Compile Include="Primitives\SubrAtom.cs" />
+    <Compile Include="Primitives\SubrClosure.cs" />
+    <Compile Include="Primitives\SubrCons.cs" />
+    <Compile Include="Primitives\SubrConsP.cs" />
+    <Compile Include="Primitives\SubrDifference.cs" />
+    <Compile Include="Primitives\SubrEq.cs" />
+    <Compile Include="Primitives\SubrEval.cs" />
+    <Compile Include="Primitives\SubrExpr.cs" />
+    <Compile Include="Primitives\SubrFirst.cs" />
+    <Compile Include="Primitives\SubrFunctionP.cs" />
+    <Compile Include="Primitives\SubrGreater.cs" />
+    <Compile Include="Primitives\SubrIdP.cs" />
+    <Compile Include="Primitives\SubrLess.cs" />
+    <Compile Include="Primitives\SubrList.cs" />
+    <Compile Include="Primitives\SubrNClosure.cs" />
+    <Compile Include="Primitives\SubrNExpr.cs" />
+    <Compile Include="Primitives\SubrNull.cs" />
+    <Compile Include="Primitives\SubrNumberP.cs" />
+    <Compile Include="Primitives\SubrPlus.cs" />
+    <Compile Include="Primitives\SubrQuotient.cs" />
+    <Compile Include="Primitives\SubrRemainder.cs" />
+    <Compile Include="Primitives\SubrRest.cs" />
+    <Compile Include="Primitives\SubrSet.cs" />
+    <Compile Include="Primitives\SubrTimes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Language\Identifier.cs" />
+    <Compile Include="Language\List.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagrams\CompilerDiagram.cd" />
+    <None Include="Diagrams\LanguageDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

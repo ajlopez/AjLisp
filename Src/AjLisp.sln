@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9EA5A596-A144-47E1-A892-4DF757F7C962}"
+	ProjectSection(SolutionItems) = preProject
+		AjLisp.vsmdi = AjLisp.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Todo.txt = Todo.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjLisp", "AjLisp\AjLisp.csproj", "{EAE3E9D2-BCBB-49E5-9F78-20DDA5CE437F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjLisp.Console", "AjLisp.Console\AjLisp.Console.csproj", "{D1136EC3-9C6A-4998-8A41-9C5C3E70BF73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjLisp.Tests", "AjLisp.Tests\AjLisp.Tests.csproj", "{2CB2C696-AA85-4978-A66B-AD5737D551AD}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = AjLisp.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAE3E9D2-BCBB-49E5-9F78-20DDA5CE437F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAE3E9D2-BCBB-49E5-9F78-20DDA5CE437F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAE3E9D2-BCBB-49E5-9F78-20DDA5CE437F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAE3E9D2-BCBB-49E5-9F78-20DDA5CE437F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1136EC3-9C6A-4998-8A41-9C5C3E70BF73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1136EC3-9C6A-4998-8A41-9C5C3E70BF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1136EC3-9C6A-4998-8A41-9C5C3E70BF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1136EC3-9C6A-4998-8A41-9C5C3E70BF73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB2C696-AA85-4978-A66B-AD5737D551AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB2C696-AA85-4978-A66B-AD5737D551AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB2C696-AA85-4978-A66B-AD5737D551AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB2C696-AA85-4978-A66B-AD5737D551AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

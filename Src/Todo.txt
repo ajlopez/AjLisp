@@ -1,0 +1,53 @@
+
++ Add VS Tests
++ Review Code Coverage
++ Naming Refactoring
++ String Value (atom?)
++ Numbers
++ ParserTests.ParseString (now commented)
++ Remove operators in Lexer (everything is an identifier, atom, ??)
+= What is a separator in Lexer?
++ Rename TokenType members
++ parenthesis as separators
++ negative integers
++ names without letters
+
++ new native objects
++ invoke native objects methods, fields, properties
++ invoke native type methods, fields
+
+- java dot notation http://jscheme.sourceforge.net/jscheme/doc/javadot.html
+
++ (a . b)
+
++ macro expansion, backquote, comma, comma-at
++ rational numbers
+
++ rational division
+
+- tail recursion
+- parse rational number 3/2
+
++ real numbers
++ negative reals
+
++ Rename AjLisp.Types to AjLisp.Language
+
++ ValueEnvironment
++ ValueEnvironment tests
++ value, references and IExpression (ISymbolicExpression??)
+	IExpression can be Evaluate(...)
+
+Sources
+
+http://www.gigamonkeys.com/book/ Practical Common Lisp
+
+On Lisp, Paul Graham
+http://www.paulgraham.com/onlisp.html
+
+http://letoverlambda.com/index.cl/toc Let over lambda 50 years of lisp
+
+http://pagesperso-systeme.lip6.fr/Christian.Queinnec/WWW/Queinnec.html
+http://www.softwarepreservation.org/projects/LISP/le_lisp/doc/lelisp15.25-refman-en.pdf
+http://media.ibm1130.org/LispUsersGuidePart1.PDF
+

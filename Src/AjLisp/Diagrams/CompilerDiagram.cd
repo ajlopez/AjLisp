@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AjLisp.Compiler.Lexer">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="NextChar" Hidden="true" />
+      <Method Name="NextCharSkipBlanks" Hidden="true" />
+      <Method Name="NextInteger" Hidden="true" />
+      <Method Name="NextName" Hidden="true" />
+      <Method Name="NextReal" Hidden="true" />
+      <Method Name="NextSeparator" Hidden="true" />
+      <Method Name="NextSpecialName" Hidden="true" />
+      <Method Name="NextString" Hidden="true" />
+      <Method Name="PushChar" Hidden="true" />
+      <Method Name="PushToken" Hidden="true" />
+      <Method Name="SkipToControl" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AYMAACAQAAggIAABAAIAgAAQIAAAABCAAAAAEEIAAAA=</HashCode>
+      <FileName>Compiler\Lexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AjLisp.Compiler.Parser">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="CompileList" Hidden="true" />
+      <Method Name="CompileTerm" Hidden="true" />
+      <Method Name="HasMoreTokens" Hidden="true" />
+      <Method Name="NextToken" Hidden="true" />
+      <Method Name="NextTokenIs" Hidden="true" />
+      <Method Name="Parser" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAIAAgAAAAAAAAAACAAAAAAAAIAAAAAAwABAAAAAAEA=</HashCode>
+      <FileName>Compiler\Parser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AjLisp.Machine">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="Define" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Machine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AjLisp.ValueEnvironment">
+    <Position X="7.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAIAgBAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValueEnvironment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
