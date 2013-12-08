@@ -51,11 +51,12 @@ namespace AjLisp
             this.Define("cons?", new SubrConsP());
             this.Define("less", new SubrLess());
             this.Define("greater", new SubrGreater());
-            this.Define("plus", new SubrPlus());
-            this.Define("difference", new SubrDifference());
-            this.Define("times", new SubrTimes());
-            this.Define("quotient", new SubrQuotient());
-            this.Define("remainder", new SubrRemainder());
+
+            this.Define("+", new SubrPlus());
+            this.Define("-", new SubrDifference());
+            this.Define("*", new SubrTimes());
+            this.Define("/", new SubrQuotient());
+            this.Define("%", new SubrRemainder());
 
             this.Define("invoke", new SubrInvoke());
             this.Define("type-invoke", new FSubrTypeInvoke());

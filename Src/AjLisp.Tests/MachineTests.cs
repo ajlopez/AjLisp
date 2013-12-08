@@ -162,7 +162,7 @@
         [TestMethod]
         public void EvaluateEvalQuotedPlusTwoIntegers()
         {
-            this.EvaluateAndCompare("(eval '(plus 1 2))", "3");
+            this.EvaluateAndCompare("(eval '(+ 1 2))", "3");
         }
 
         [TestMethod]
@@ -364,7 +364,7 @@
         [TestMethod]
         public void EvaluateIdPredicatePlus()
         {
-            this.EvaluateAndCompare("(id? (plus 1 2))", "nil");
+            this.EvaluateAndCompare("(id? (+ 1 2))", "nil");
         }
 
         [TestMethod]
@@ -442,7 +442,7 @@
         [TestMethod]
         public void EvaluateNumberPredicatePlus()
         {
-            this.EvaluateAndCompare("(number? (plus 1 2))", "t");
+            this.EvaluateAndCompare("(number? (+ 1 2))", "t");
         }
 
         [TestMethod]
@@ -484,7 +484,7 @@
         [TestMethod]
         public void EvaluateEqPredicateIntegerPlus()
         {
-            this.EvaluateAndCompare("(eq 3 (plus 1 2))", "t");
+            this.EvaluateAndCompare("(eq 3 (+ 1 2))", "t");
         }
 
         [TestMethod]
@@ -556,13 +556,13 @@
         [TestMethod]
         public void EvaluateProgNTwoExpressions()
         {
-            this.EvaluateAndCompare("(progn (plus 1 2) (plus 3 4))", "7");
+            this.EvaluateAndCompare("(progn (+ 1 2) (+ 3 4))", "7");
         }
 
         [TestMethod]
         public void EvaluateProgNThreeExpressions()
         {
-            this.EvaluateAndCompare("(progn (plus 1 2) (plus 3 4) (plus 5 6))", "11");
+            this.EvaluateAndCompare("(progn (+ 1 2) (+ 3 4) (+ 5 6))", "11");
         }
 
         [TestMethod]
@@ -698,13 +698,13 @@
         [TestMethod]
         public void EvaluateLetAndEvaluate()
         {
-            this.EvaluateAndCompare("(let ((a 1) (b 2)) (plus a b))", "3");
+            this.EvaluateAndCompare("(let ((a 1) (b 2)) (+ a b))", "3");
         }
 
         [TestMethod]
         public void EvaluateLetSAndEvaluate()
         {
-            this.EvaluateAndCompare("(lets ((a 1) (b a)) (plus a b))", "2");
+            this.EvaluateAndCompare("(lets ((a 1) (b a)) (+ a b))", "2");
         }
 
         [TestMethod]
@@ -788,67 +788,67 @@
         [TestMethod]
         public void EvaluatePlusOneTwo()
         {
-            this.EvaluateAndCompare("(plus 1 2)", "3");
+            this.EvaluateAndCompare("(+ 1 2)", "3");
         }
 
         [TestMethod]
         public void EvaluatePlusReals()
         {
-            this.EvaluateAndCompare("(plus 1.2 2.3)", "3.5");
+            this.EvaluateAndCompare("(+ 1.2 2.3)", "3.5");
         }
 
         [TestMethod]
         public void EvaluatePlusOneTwoThree()
         {
-            this.EvaluateAndCompare("(plus 1 2 3)", "6");
+            this.EvaluateAndCompare("(+ 1 2 3)", "6");
         }
 
         [TestMethod]
         public void EvaluateDifferenceOneTwo()
         {
-            this.EvaluateAndCompare("(difference 1 2)", "-1");
+            this.EvaluateAndCompare("(- 1 2)", "-1");
         }
 
         [TestMethod]
         public void EvaluateDifferenceThreeTwo()
         {
-            this.EvaluateAndCompare("(difference 3 2)", "1");
+            this.EvaluateAndCompare("(- 3 2)", "1");
         }
 
         [TestMethod]
         public void EvaluateTimesOneTwo()
         {
-            this.EvaluateAndCompare("(times 1 2)", "2");
+            this.EvaluateAndCompare("(* 1 2)", "2");
         }
 
         [TestMethod]
         public void EvaluateTimesOneTwoThree()
         {
-            this.EvaluateAndCompare("(times 1 2 3)", "6");
+            this.EvaluateAndCompare("(* 1 2 3)", "6");
         }
 
         [TestMethod]
         public void EvaluateQuotientSixThree()
         {
-            this.EvaluateAndCompare("(quotient 6 3)", "2");
+            this.EvaluateAndCompare("(/ 6 3)", "2");
         }
 
         [TestMethod]
         public void EvaluateQuotientTwoOne()
         {
-            this.EvaluateAndCompare("(quotient 2 1)", "2");
+            this.EvaluateAndCompare("(/ 2 1)", "2");
         }
 
         [TestMethod]
         public void EvaluateRemainderSixThree()
         {
-            this.EvaluateAndCompare("(remainder 6 3)", "0");
+            this.EvaluateAndCompare("(% 6 3)", "0");
         }
 
         [TestMethod]
         public void EvaluateRemainderFiveThree()
         {
-            this.EvaluateAndCompare("(remainder 5 3)", "2");
+            this.EvaluateAndCompare("(% 5 3)", "2");
         }
 
         [TestMethod]

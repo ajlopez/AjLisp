@@ -24,7 +24,7 @@
         public void MapFirst()
         {
             this.LoadFile("Core.lsp");
-            this.Evaluate("(define inc (x) (plus x 1))");
+            this.Evaluate("(define inc (x) (+ x 1))");
 
             this.EvaluateAndCompare("(mapfirst inc '(1 2 3))", "(2 3 4)");
             this.EvaluateAndCompare("(mapfirst inc nil)", "nil");
