@@ -30,6 +30,30 @@
         }
 
         [TestMethod]
+        public void ParseNameWithUnderscore()
+        {
+            this.Tokenize("foo_bar", TokenType.Name, "foo_bar");
+        }
+
+        [TestMethod]
+        public void ParseNameWithInitialUnderscore()
+        {
+            this.Tokenize("_foo", TokenType.Name, "_foo");
+        }
+
+        [TestMethod]
+        public void ParseNameQuestionMark()
+        {
+            this.Tokenize("nil?", TokenType.Name, "nil?");
+        }
+
+        [TestMethod]
+        public void ParseNameExclamationMark()
+        {
+            this.Tokenize("set!", TokenType.Name, "set!");
+        }
+
+        [TestMethod]
         public void ParseLeftParenthesis()
         {
             this.Tokenize("(", TokenType.Separator, '(');
@@ -116,6 +140,8 @@
         [TestMethod]
         public void ParseSpecialCharsName()
         {
+            this.Tokenize("==", TokenType.Name, "==");
+            this.Tokenize("!=", TokenType.Name, "!=");
             this.Tokenize("<", TokenType.Name, "<");
             this.Tokenize("<=", TokenType.Name, "<=");
             this.Tokenize(">=", TokenType.Name, ">=");
