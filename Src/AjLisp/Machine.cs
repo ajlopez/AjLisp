@@ -35,10 +35,10 @@ namespace AjLisp
             this.Define("flambda", new FSubrFLambda());
             this.Define("nlambda", new FSubrNLambda());
             this.Define("mlambda", new FSubrMLambda());
-            this.Define("numberp", new SubrNumberP());
-            this.Define("functionp", new SubrFunctionP());
-            this.Define("idp", new SubrIdP());
-            this.Define("nilp", new SubrNilP());
+            this.Define("number?", new SubrNumberP());
+            this.Define("function?", new SubrFunctionP());
+            this.Define("id?", new SubrIdP());
+            this.Define("nil?", new SubrNilP());
             this.Define("define", new FSubrDefine());
             this.Define("definef", new FSubrDefineF());
             this.Define("definen", new FSubrDefineN());
@@ -48,7 +48,7 @@ namespace AjLisp
             this.Define("let", new FSubrLet());
             this.Define("lets", new FSubrLetS());
             this.Define("set", new SubrSet());
-            this.Define("consp", new SubrConsP());
+            this.Define("cons?", new SubrConsP());
             this.Define("less", new SubrLess());
             this.Define("greater", new SubrGreater());
             this.Define("plus", new SubrPlus());

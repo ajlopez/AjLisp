@@ -41,8 +41,8 @@
         [TestMethod]
         public void EvaluateNilPredicate()
         {
-            this.EvaluateAndCompare("(nilp nil)", "t");
-            this.EvaluateAndCompare("(nilp t)", "nil");
+            this.EvaluateAndCompare("(nil? nil)", "t");
+            this.EvaluateAndCompare("(nil? t)", "nil");
         }
 
         [TestMethod]
@@ -310,139 +310,139 @@
         [TestMethod]
         public void EvaluateConsPredicateNil()
         {
-            this.EvaluateAndCompare("(consp nil)", "nil");
+            this.EvaluateAndCompare("(cons? nil)", "nil");
         }
 
         [TestMethod]
         public void EvaluateConsPredicateQuotedAtom()
         {
-            this.EvaluateAndCompare("(consp 'a)", "nil");
+            this.EvaluateAndCompare("(cons? 'a)", "nil");
         }
 
         [TestMethod]
         public void EvaluateConsPredicateQuotedList()
         {
-            this.EvaluateAndCompare("(consp '(a))", "t");
+            this.EvaluateAndCompare("(cons? '(a))", "t");
         }
 
         [TestMethod]
         public void EvaluateConsPredicateCons()
         {
-            this.EvaluateAndCompare("(consp (cons 'a '(b)))", "t");
+            this.EvaluateAndCompare("(cons? (cons 'a '(b)))", "t");
         }
 
         [TestMethod]
         public void EvaluateIdPredicateNil()
         {
-            this.EvaluateAndCompare("(idp nil)", "t");
+            this.EvaluateAndCompare("(id? nil)", "t");
         }
 
         [TestMethod]
         public void EvaluateIdPredicateTrue()
         {
-            this.EvaluateAndCompare("(idp t)", "t");
+            this.EvaluateAndCompare("(id? t)", "t");
         }
 
         [TestMethod]
         public void EvaluateIdPredicateQuotedAtom()
         {
-            this.EvaluateAndCompare("(idp 'a)", "t");
+            this.EvaluateAndCompare("(id? 'a)", "t");
         }
 
         [TestMethod]
         public void EvaluateIdPredicateQuotedList()
         {
-            this.EvaluateAndCompare("(idp '(a b))", "nil");
+            this.EvaluateAndCompare("(id? '(a b))", "nil");
         }
 
         [TestMethod]
         public void EvaluateIdPredicateQuotedInteger()
         {
-            this.EvaluateAndCompare("(idp 1)", "nil");
+            this.EvaluateAndCompare("(id? 1)", "nil");
         }
 
         [TestMethod]
         public void EvaluateIdPredicatePlus()
         {
-            this.EvaluateAndCompare("(idp (plus 1 2))", "nil");
+            this.EvaluateAndCompare("(id? (plus 1 2))", "nil");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateNil()
         {
-            this.EvaluateAndCompare("(functionp nil)", "nil");
+            this.EvaluateAndCompare("(function? nil)", "nil");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateQuotedAtom()
         {
-            this.EvaluateAndCompare("(functionp 'a)", "nil");
+            this.EvaluateAndCompare("(function? 'a)", "nil");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateAtom()
         {
-            this.EvaluateAndCompare("(functionp atom)", "t");
+            this.EvaluateAndCompare("(function? atom)", "t");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateLambda()
         {
-            this.EvaluateAndCompare("(functionp (lambda (x) x))", "t");
+            this.EvaluateAndCompare("(function? (lambda (x) x))", "t");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateIf()
         {
-            this.EvaluateAndCompare("(functionp if)", "t");
+            this.EvaluateAndCompare("(function? if)", "t");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateLambdaAtom()
         {
-            this.EvaluateAndCompare("(functionp lambda)", "t");
+            this.EvaluateAndCompare("(function? lambda)", "t");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateMacroLambda()
         {
-            this.EvaluateAndCompare("(functionp mlambda)", "t");
+            this.EvaluateAndCompare("(function? mlambda)", "t");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicateNil()
         {
-            this.EvaluateAndCompare("(numberp nil)", "nil");
+            this.EvaluateAndCompare("(number? nil)", "nil");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicateTrue()
         {
-            this.EvaluateAndCompare("(numberp t)", "nil");
+            this.EvaluateAndCompare("(number? t)", "nil");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicateQuotedAtom()
         {
-            this.EvaluateAndCompare("(numberp 'a)", "nil");
+            this.EvaluateAndCompare("(number? 'a)", "nil");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicateQuotedList()
         {
-            this.EvaluateAndCompare("(numberp '(a b))", "nil");
+            this.EvaluateAndCompare("(number? '(a b))", "nil");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicateInteger()
         {
-            this.EvaluateAndCompare("(numberp 1)", "t");
+            this.EvaluateAndCompare("(number? 1)", "t");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicatePlus()
         {
-            this.EvaluateAndCompare("(numberp (plus 1 2))", "t");
+            this.EvaluateAndCompare("(number? (plus 1 2))", "t");
         }
 
         [TestMethod]
