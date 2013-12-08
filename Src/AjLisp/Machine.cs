@@ -25,7 +25,7 @@ namespace AjLisp
             this.Define("backquote", new FSubrBackquote());
             this.Define("append", new SubrAppend());
             this.Define("cond", new FSubrCond());
-            this.Define("atom", new SubrAtom());
+            this.Define("atom?", new SubrAtom());
             this.Define("eval", new SubrEval());
             this.Define("null", new SubrNull());
             this.Define("lambda", new FSubrLambda());

@@ -54,43 +54,43 @@
         [TestMethod]
         public void EvaluateAtomNil()
         {
-            this.EvaluateAndCompare("(atom nil)", "true");
+            this.EvaluateAndCompare("(atom? nil)", "true");
         }
 
         [TestMethod]
         public void EvaluateAtomTrue()
         {
-            this.EvaluateAndCompare("(atom true)", "true");
+            this.EvaluateAndCompare("(atom? true)", "true");
         }
 
         [TestMethod]
         public void EvaluateAtomFalse()
         {
-            this.EvaluateAndCompare("(atom false)", "true");
+            this.EvaluateAndCompare("(atom? false)", "true");
         }
 
         [TestMethod]
         public void EvaluateAtomQuotedAtom()
         {
-            this.EvaluateAndCompare("(atom 'a)", "true");
+            this.EvaluateAndCompare("(atom? 'a)", "true");
         }
 
         [TestMethod]
         public void EvaluateAtomInteger()
         {
-            this.EvaluateAndCompare("(atom 12)", "true");
+            this.EvaluateAndCompare("(atom? 12)", "true");
         }
 
         [TestMethod]
         public void EvaluateAtomQuotedList()
         {
-            this.EvaluateAndCompare("(atom '(a b))", "false");
+            this.EvaluateAndCompare("(atom? '(a b))", "false");
         }
 
         [TestMethod]
         public void EvaluateAtomEmptyList()
         {
-            this.EvaluateAndCompare("(atom ())", "true");
+            this.EvaluateAndCompare("(atom? ())", "true");
         }
 
         [TestMethod]
@@ -180,7 +180,7 @@
         [TestMethod]
         public void EvaluateEvalQuotedAtomQuotedAtom()
         {
-            this.EvaluateAndCompare("(eval '(atom 'a))", "true");
+            this.EvaluateAndCompare("(eval '(atom? 'a))", "true");
         }
 
         [TestMethod]
@@ -394,7 +394,7 @@
         [TestMethod]
         public void EvaluateFunctionPredicateAtom()
         {
-            this.EvaluateAndCompare("(function? atom)", "true");
+            this.EvaluateAndCompare("(function? atom?)", "true");
         }
 
         [TestMethod]
