@@ -429,91 +429,91 @@
         [TestMethod]
         public void EvaluateEqPredicateNilNil()
         {
-            this.EvaluateAndCompare("(eq nil nil)", "true");
+            this.EvaluateAndCompare("(== nil nil)", "true");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateTrueTrue()
         {
-            this.EvaluateAndCompare("(eq t t)", "true");
+            this.EvaluateAndCompare("(== t t)", "true");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateQuotedAtoms()
         {
-            this.EvaluateAndCompare("(eq 'a 'a)", "true");
+            this.EvaluateAndCompare("(== 'a 'a)", "true");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateQuotedDifferentAtoms()
         {
-            this.EvaluateAndCompare("(eq 'a 'b)", "false");
+            this.EvaluateAndCompare("(== 'a 'b)", "false");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateIntegers()
         {
-            this.EvaluateAndCompare("(eq 12 20)", "false");
+            this.EvaluateAndCompare("(== 12 20)", "false");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateOneOne()
         {
-            this.EvaluateAndCompare("(eq 1 1)", "true");
+            this.EvaluateAndCompare("(== 1 1)", "true");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateIntegerPlus()
         {
-            this.EvaluateAndCompare("(eq 3 (+ 1 2))", "true");
+            this.EvaluateAndCompare("(== 3 (+ 1 2))", "true");
         }
 
         [TestMethod]
         public void EvaluateGreaterPredicateTwoOne()
         {
-            this.EvaluateAndCompare("(greater 2 1)", "true");
+            this.EvaluateAndCompare("(> 2 1)", "true");
         }
 
         [TestMethod]
         public void EvaluateGreaterPredicateOneTwo()
         {
-            this.EvaluateAndCompare("(greater 1 2)", "false");
+            this.EvaluateAndCompare("(> 1 2)", "false");
         }
 
         [TestMethod]
         public void EvaluateGreaterPredicateAtomsAB()
         {
-            this.EvaluateAndCompare("(greater 'a 'b)", "false");
+            this.EvaluateAndCompare("(> 'a 'b)", "false");
         }
 
         [TestMethod]
         public void EvaluateGreaterPredicateAtomsBA()
         {
-            this.EvaluateAndCompare("(greater 'b 'a)", "true");
+            this.EvaluateAndCompare("(> 'b 'a)", "true");
         }
 
         [TestMethod]
         public void EvaluateLessPredicateTwoOne()
         {
-            this.EvaluateAndCompare("(less 2 1)", "false");
+            this.EvaluateAndCompare("(< 2 1)", "false");
         }
 
         [TestMethod]
         public void EvaluateLessPredicateOneTwo()
         {
-            this.EvaluateAndCompare("(less 1 2)", "true");
+            this.EvaluateAndCompare("(< 1 2)", "true");
         }
 
         [TestMethod]
         public void EvaluateLessPredicateAtomsAB()
         {
-            this.EvaluateAndCompare("(less 'a 'b)", "true");
+            this.EvaluateAndCompare("(< 'a 'b)", "true");
         }
 
         [TestMethod]
         public void EvaluateLessPredicateAtomsBA()
         {
-            this.EvaluateAndCompare("(less 'b 'a)", "false");
+            this.EvaluateAndCompare("(< 'b 'a)", "false");
         }
 
         [TestMethod]
@@ -728,7 +728,7 @@
         [TestMethod]
         public void EvaluateCondExpressions()
         {
-            this.EvaluateAndCompare("(cond ((greater 3 1) 3) ((less 3 1) 1))", "3");
+            this.EvaluateAndCompare("(cond ((> 3 1) 3) ((< 3 1) 1))", "3");
         }
 
         [TestMethod]

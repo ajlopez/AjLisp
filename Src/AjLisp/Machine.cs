@@ -38,14 +38,15 @@ namespace AjLisp
             this.Define("definef", new FSubrDefineF());
             this.Define("definen", new FSubrDefineN());
             this.Define("definem", new FSubrDefineM());
-            this.Define("eq", new SubrEq());
             this.Define("if", new FSubrIf());
             this.Define("let", new FSubrLet());
             this.Define("lets", new FSubrLetS());
             this.Define("set", new SubrSet());
             this.Define("cons?", new SubrConsP());
-            this.Define("less", new SubrLess());
-            this.Define("greater", new SubrGreater());
+
+            this.Define("==", new SubrEq());
+            this.Define("<", new SubrLess());
+            this.Define(">", new SubrGreater());
 
             this.Define("+", new SubrPlus());
             this.Define("-", new SubrDifference());
