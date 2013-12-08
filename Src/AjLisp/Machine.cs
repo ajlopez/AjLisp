@@ -17,9 +17,7 @@ namespace AjLisp
         {
             this.Define("cons", new SubrCons());
             this.Define("first", new SubrFirst());
-            this.Define("car", new SubrFirst());
             this.Define("rest", new SubrRest());
-            this.Define("cdr", new SubrRest());
             this.Define("list", new SubrList());
             this.Define("quote", new FSubrQuote());
             this.Define("backquote", new FSubrBackquote());

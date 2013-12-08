@@ -233,28 +233,16 @@
         }
 
         [TestMethod]
-        public void EvaluateCarList()
+        public void EvaluateFirstList()
         {
-            this.EvaluateAndCompare("(car (list 'a 'b))", "a");
-        }
-
-        [TestMethod]
-        public void EvaluateCarQuotedList()
-        {
-            this.EvaluateAndCompare("(car '(a b))", "a");
+            this.EvaluateAndCompare("(first (list 'a 'b))", "a");
         }
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void RaiseOnEvaluateCarQuotedAtom()
+        public void RaiseOnEvaluateFirstQuotedAtom()
         {
-            this.EvaluateAndCompare("(car 'a)", "a");
-        }
-
-        [TestMethod]
-        public void EvaluateCarNilAsNil()
-        {
-            this.EvaluateAndCompare("(car nil)", "nil");
+            this.EvaluateAndCompare("(first 'a)", "a");
         }
 
         [TestMethod]
@@ -274,25 +262,6 @@
         public void RaiseOnRestQuotedAtom()
         {
             this.EvaluateAndCompare("(rest 'a)", "a");
-        }
-
-        [TestMethod]
-        public void EvaluateCdrListTwoQuotedAtoms()
-        {
-            this.EvaluateAndCompare("(cdr (list 'a 'b))", "(b)");
-        }
-
-        [TestMethod]
-        public void EvaluateCdrQuotedList()
-        {
-            this.EvaluateAndCompare("(cdr '(a b))", "(b)");
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
-        public void RaiseOnCdrQuotedAtom()
-        {
-            this.EvaluateAndCompare("(cdr 'a)", "a");
         }
 
         [TestMethod]
@@ -694,7 +663,7 @@
         public void EvaluateDefineFChoose()
         {
             Machine machine = new Machine();
-            machine.Evaluate("(definef choose (args) (if (eval (car args)) (eval (car (cdr args))) (eval (car (cdr (cdr args))))))");
+            machine.Evaluate("(definef choose (args) (if (eval (first args)) (eval (first (rest args))) (eval (first (rest (rest args))))))");
             this.EvaluateAndCompare(machine, "(choose true 'a 'b)", "a");
             this.EvaluateAndCompare(machine, "(choose nil 'a 'b)", "b");
             this.EvaluateAndCompare(machine, "(choose false 'a 'b)", "b");
