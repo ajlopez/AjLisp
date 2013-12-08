@@ -1,14 +1,12 @@
 ﻿namespace AjLisp.Tests
 {
     using System;
-    using System.Text;
     using System.Collections;
     using System.Linq;
-
+    using System.Text;
     using AjLisp;
     using AjLisp.Compiler;
     using AjLisp.Language;
-
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]

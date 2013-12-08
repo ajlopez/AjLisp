@@ -11,7 +11,7 @@ namespace AjLisp.Primitives
         public override object Execute(List arguments, ValueEnvironment environment)
         {
             ValueEnvironment newenv;
-            newenv = MakeEnvironment((List) arguments.First, environment);
+            newenv = MakeEnvironment((List)arguments.First, environment);
             FSubrProgN progn = new FSubrProgN();
             return progn.Execute(arguments.Next, newenv);
         }
@@ -23,7 +23,7 @@ namespace AjLisp.Primitives
             while (!Predicates.IsNil(arguments))
             {
                 List argument = (List)arguments.First;
-                Identifier id = (Identifier) argument.First;
+                Identifier id = (Identifier)argument.First;
                 object expr = argument.Next.First;
                 newenv.SetValue(id.Name, Machine.Evaluate(expr, parent));
                 arguments = arguments.Next;

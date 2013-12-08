@@ -1,12 +1,12 @@
 ﻿namespace AjLisp.Tests
 {
     using System;
-    using System.Text;
     using System.Collections.Generic;
     using System.Linq;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using AjLisp.Primitives;
+    using System.Text;
     using AjLisp.Language;
+    using AjLisp.Primitives;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class PrimitivesTests
@@ -52,7 +52,7 @@
         {
             FSubrNew fnew = new FSubrNew();
 
-            object result = fnew.Apply(new List( typeof(System.IO.DirectoryInfo), new List(".")), new ValueEnvironment());
+            object result = fnew.Apply(new List(typeof(System.IO.DirectoryInfo), new List(".")), new ValueEnvironment());
 
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result, typeof(System.IO.DirectoryInfo));

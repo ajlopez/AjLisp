@@ -1,12 +1,10 @@
 ﻿namespace AjLisp.Tests
 {
     using System;
-    using System.Text;
     using System.Collections.Generic;
     using System.Linq;
-
+    using System.Text;
     using AjLisp.Language;
-
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
@@ -29,7 +27,7 @@
         [TestMethod]
         public void CreateLongRationalNumber()
         {
-            object result = RationalNumber.Create(Int64.MaxValue, Int64.MaxValue-1);
+            object result = RationalNumber.Create(Int64.MaxValue, Int64.MaxValue - 1);
 
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result, typeof(RationalNumber));
@@ -37,7 +35,7 @@
             RationalNumber number = (RationalNumber)result;
 
             Assert.AreEqual(Int64.MaxValue, number.Numerator);
-            Assert.AreEqual(Int64.MaxValue-1, number.Denominator);
+            Assert.AreEqual(Int64.MaxValue - 1, number.Denominator);
         }
 
         public void CreateLong()
@@ -62,7 +60,7 @@
         [TestMethod]
         public void CreateUsingNegativeIntegers()
         {
-            RationalNumber number = (RationalNumber) RationalNumber.Create(-1, 2);
+            RationalNumber number = (RationalNumber)RationalNumber.Create(-1, 2);
 
             Assert.AreEqual(-1, number.Numerator);
             Assert.AreEqual(2, number.Denominator);
@@ -124,7 +122,7 @@
         {
             RationalNumber number = (RationalNumber)RationalNumber.Create(3, 2);
 
-            Assert.AreEqual(2, number.Add((RationalNumber) RationalNumber.Create(1, 2)));
+            Assert.AreEqual(2, number.Add((RationalNumber)RationalNumber.Create(1, 2)));
             Assert.AreEqual(-1, number.Add((RationalNumber)RationalNumber.Create(-5, 2)));
         }
 
@@ -156,7 +154,7 @@
         [TestMethod]
         public void DivideRationalNumberByLong()
         {
-            RationalNumber number = (RationalNumber) RationalNumber.Create(3, 2);
+            RationalNumber number = (RationalNumber)RationalNumber.Create(3, 2);
             Assert.AreEqual(RationalNumber.Create(3, 4), number.DivideBy(2));
             Assert.AreEqual(RationalNumber.Create(4, 3), number.DivideTo(2));
         }

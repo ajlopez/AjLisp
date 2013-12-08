@@ -33,18 +33,18 @@ namespace AjLisp.Primitives
 
             if (Predicates.IsIdentifier(this.arguments))
             {
-                nenv.SetValue(((Identifier) this.arguments).Name, arguments);
+                nenv.SetValue(((Identifier)this.arguments).Name, arguments);
                 return nenv;
             }
 
-            List argnames = (List) this.arguments;
+            List argnames = (List)this.arguments;
             List argvalues = arguments;
             Identifier argname;
             object argvalue;
 
             while (!Predicates.IsNil(argnames) && !Predicates.IsNil(argvalues))
             {
-                argname = (Identifier) argnames.First;
+                argname = (Identifier)argnames.First;
                 argvalue = argvalues.First;
                 nenv.SetValue(argname.Name, argvalue);
                 argnames = argnames.Next;

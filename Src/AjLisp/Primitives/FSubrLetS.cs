@@ -11,7 +11,7 @@ namespace AjLisp.Primitives
         public override object Execute(List args, ValueEnvironment env)
         {
             ValueEnvironment newenv;
-            newenv = MakeEnvironment((List) args.First, env);
+            newenv = MakeEnvironment((List)args.First, env);
             FSubrProgN progn = new FSubrProgN();
             return progn.Execute(args.Next, newenv);
         }

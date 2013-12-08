@@ -12,7 +12,7 @@ namespace AjLisp.Primitives
         {
             Type type = TypeUtilities.GetType(environment, arguments.First);
 
-            string methodName = (string) Machine.Evaluate(arguments.Next.First, environment);
+            string methodName = (string)Machine.Evaluate(arguments.Next.First, environment);
 
             object[] parameters = null;
 

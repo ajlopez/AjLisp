@@ -1,11 +1,11 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace AjLisp.Tests
+﻿namespace AjLisp.Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class ValueEnvironmentTests
     {

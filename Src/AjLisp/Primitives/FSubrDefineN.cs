@@ -14,9 +14,9 @@ namespace AjLisp.Primitives
             List arglist;
             List body;
 
-            atom = (Identifier) arguments.First;
+            atom = (Identifier)arguments.First;
 
-            arglist = (List) arguments.Next.First;
+            arglist = (List)arguments.Next.First;
             body = arguments.Next.Next;
 
             if (!Predicates.IsIdentifier(arglist.First) || !Predicates.IsNil(arglist.Rest))

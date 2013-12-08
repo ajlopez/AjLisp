@@ -17,7 +17,7 @@ namespace AjLisp.Primitives
 
             List list = (List)argument1;
 
-            return Append((List) argument1, argument2);
+            return Append((List)argument1, argument2);
         }
 
         private static object Append(List list1, object list2)

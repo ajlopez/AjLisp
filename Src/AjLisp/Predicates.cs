@@ -14,7 +14,7 @@
 
         public static bool IsFalse(object obj)
         {
-            return IsNil(obj) || (obj is bool && ((bool) obj) == false);
+            return IsNil(obj) || (obj is bool && (bool)obj == false);
         }
 
         public static bool IsTrue(object obj)

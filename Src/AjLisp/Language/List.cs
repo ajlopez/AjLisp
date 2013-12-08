@@ -47,7 +47,7 @@ namespace AjLisp.Language
 
         public object Evaluate(ValueEnvironment environment)
         {
-            IFunction function = (IFunction) Machine.Evaluate(this.first, environment);
+            IFunction function = (IFunction)Machine.Evaluate(this.first, environment);
 
             if (function == null)
                 throw new InvalidOperationException(string.Format("Unknown form '{0}'", this.first.ToString()));

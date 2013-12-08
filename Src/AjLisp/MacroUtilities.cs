@@ -57,7 +57,7 @@
 
             if (list.First is Identifier)
             {
-                Identifier identifier = (Identifier) list.First;
+                Identifier identifier = (Identifier)list.First;
 
                 if (identifier.Name.Equals("comma"))
                     return true;

@@ -26,7 +26,7 @@
 
         public long Denominator { get { return this.denominator; } }
 
-        public double Value { get { return (double) this.numerator / (double) this.denominator; } }
+        public double Value { get { return (double)this.numerator / (double)this.denominator; } }
 
         public static object Create(long numerator, long denominator)
         {

@@ -19,7 +19,7 @@
 
             // TODO escape characters
             if (obj is string)
-                return '"' + (string) obj + '"';
+                return '"' + (string)obj + '"';
 
             return Convert.ToString(obj, System.Globalization.CultureInfo.InvariantCulture);
         }

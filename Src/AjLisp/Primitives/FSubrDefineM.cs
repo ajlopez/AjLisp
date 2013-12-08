@@ -14,11 +14,11 @@ namespace AjLisp.Primitives
             object arglist;
             List body;
 
-            atom = (Identifier) args.First;
+            atom = (Identifier)args.First;
             arglist = args.Next.First;
             body = args.Next.Next;
 
-            FSubrMacroClosure closure = new FSubrMacroClosure((Identifier) arglist, env, body);
+            FSubrMacroClosure closure = new FSubrMacroClosure((Identifier)arglist, env, body);
 
             env.SetGlobalValue(atom.Name, closure);
 

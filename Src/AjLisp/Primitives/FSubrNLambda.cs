@@ -10,7 +10,7 @@ namespace AjLisp.Primitives
     {
         public override object Execute(List arguments, ValueEnvironment environment)
         {
-            List arglist = (List) arguments.First;
+            List arglist = (List)arguments.First;
 
             if (!Predicates.IsIdentifier(arglist.First) || !Predicates.IsNil(arglist.Rest))
             {
