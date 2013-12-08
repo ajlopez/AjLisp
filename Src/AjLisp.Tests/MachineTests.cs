@@ -94,27 +94,27 @@
         }
 
         [TestMethod]
-        public void EvaluateNullNil()
+        public void EvaluateNilPredicateNil()
         {
-            this.EvaluateAndCompare("(null nil)", "true");
+            this.EvaluateAndCompare("(nil? nil)", "true");
         }
 
         [TestMethod]
-        public void EvaluateNullTrue()
+        public void EvaluateNilPredicateTrue()
         {
-            this.EvaluateAndCompare("(null true)", "false");
+            this.EvaluateAndCompare("(nil? true)", "false");
         }
 
         [TestMethod]
-        public void EvaluateNullQuotedAtom()
+        public void EvaluateNilPredicateQuotedAtom()
         {
-            this.EvaluateAndCompare("(null 'a)", "false");
+            this.EvaluateAndCompare("(nil? 'a)", "false");
         }
 
         [TestMethod]
-        public void EvaluateNullQuotedList()
+        public void EvaluateNilPredicateQuotedList()
         {
-            this.EvaluateAndCompare("(null '(a b))", "false");
+            this.EvaluateAndCompare("(nil? '(a b))", "false");
         }
 
         [TestMethod]

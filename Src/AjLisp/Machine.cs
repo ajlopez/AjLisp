@@ -25,7 +25,6 @@ namespace AjLisp
             this.Define("cond", new FSubrCond());
             this.Define("atom?", new SubrAtom());
             this.Define("eval", new SubrEval());
-            this.Define("null", new SubrNull());
             this.Define("lambda", new FSubrLambda());
             this.Define("progn", new FSubrProgN());
             this.Define("flambda", new FSubrFLambda());
