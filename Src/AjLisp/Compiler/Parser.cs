@@ -64,6 +64,15 @@ namespace AjLisp.Compiler
 
             if (token.Type == TokenType.Name)
             {
+                if (token.Value.Equals("nil"))
+                    return null;
+
+                if (token.Value.Equals("false"))
+                    return false;
+
+                if (token.Value.Equals("true"))
+                    return true;
+
                 if (token.Value.Equals("'"))
                     return new List(new Identifier("quote"), new List(this.CompileTerm()));
 

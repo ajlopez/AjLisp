@@ -15,8 +15,6 @@ namespace AjLisp
 
         public Machine()
         {
-            this.Define("nil", null);
-            this.Define("t", true);
             this.Define("cons", new SubrCons());
             this.Define("first", new SubrFirst());
             this.Define("car", new SubrFirst());

@@ -13,9 +13,9 @@
 
             if (obj is bool)
                 if ((bool)obj)
-                    return "t";
+                    return "true";
                 else
-                    return "nil";
+                    return "false";
 
             // TODO escape characters
             if (obj is string)

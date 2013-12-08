@@ -35,74 +35,86 @@
         [TestMethod]
         public void EvaluateTrue()
         {
-            this.EvaluateAndCompare("t", "t");
+            this.EvaluateAndCompare("true", "true");
+        }
+
+        [TestMethod]
+        public void EvaluateFalse()
+        {
+            this.EvaluateAndCompare("false", "false");
         }
 
         [TestMethod]
         public void EvaluateNilPredicate()
         {
-            this.EvaluateAndCompare("(nil? nil)", "t");
-            this.EvaluateAndCompare("(nil? t)", "nil");
+            this.EvaluateAndCompare("(nil? nil)", "true");
+            this.EvaluateAndCompare("(nil? true)", "false");
         }
 
         [TestMethod]
         public void EvaluateAtomNil()
         {
-            this.EvaluateAndCompare("(atom nil)", "t");
+            this.EvaluateAndCompare("(atom nil)", "true");
         }
 
         [TestMethod]
         public void EvaluateAtomTrue()
         {
-            this.EvaluateAndCompare("(atom t)", "t");
+            this.EvaluateAndCompare("(atom true)", "true");
+        }
+
+        [TestMethod]
+        public void EvaluateAtomFalse()
+        {
+            this.EvaluateAndCompare("(atom false)", "true");
         }
 
         [TestMethod]
         public void EvaluateAtomQuotedAtom()
         {
-            this.EvaluateAndCompare("(atom 'a)", "t");
+            this.EvaluateAndCompare("(atom 'a)", "true");
         }
 
         [TestMethod]
         public void EvaluateAtomInteger()
         {
-            this.EvaluateAndCompare("(atom 12)", "t");
+            this.EvaluateAndCompare("(atom 12)", "true");
         }
 
         [TestMethod]
         public void EvaluateAtomQuotedList()
         {
-            this.EvaluateAndCompare("(atom '(a b))", "nil");
+            this.EvaluateAndCompare("(atom '(a b))", "false");
         }
 
         [TestMethod]
         public void EvaluateAtomEmptyList()
         {
-            this.EvaluateAndCompare("(atom ())", "t");
+            this.EvaluateAndCompare("(atom ())", "true");
         }
 
         [TestMethod]
         public void EvaluateNullNil()
         {
-            this.EvaluateAndCompare("(null nil)", "t");
+            this.EvaluateAndCompare("(null nil)", "true");
         }
 
         [TestMethod]
         public void EvaluateNullTrue()
         {
-            this.EvaluateAndCompare("(null t)", "nil");
+            this.EvaluateAndCompare("(null true)", "false");
         }
 
         [TestMethod]
         public void EvaluateNullQuotedAtom()
         {
-            this.EvaluateAndCompare("(null 'a)", "nil");
+            this.EvaluateAndCompare("(null 'a)", "false");
         }
 
         [TestMethod]
         public void EvaluateNullQuotedList()
         {
-            this.EvaluateAndCompare("(null '(a b))", "nil");
+            this.EvaluateAndCompare("(null '(a b))", "false");
         }
 
         [TestMethod]
@@ -150,7 +162,7 @@
         [TestMethod]
         public void EvaluateEvalTrue()
         {
-            this.EvaluateAndCompare("(eval t)", "t");
+            this.EvaluateAndCompare("(eval true)", "true");
         }
 
         [TestMethod]
@@ -168,7 +180,7 @@
         [TestMethod]
         public void EvaluateEvalQuotedAtomQuotedAtom()
         {
-            this.EvaluateAndCompare("(eval '(atom 'a))", "t");
+            this.EvaluateAndCompare("(eval '(atom 'a))", "true");
         }
 
         [TestMethod]
@@ -310,241 +322,247 @@
         [TestMethod]
         public void EvaluateConsPredicateNil()
         {
-            this.EvaluateAndCompare("(cons? nil)", "nil");
+            this.EvaluateAndCompare("(cons? nil)", "false");
         }
 
         [TestMethod]
         public void EvaluateConsPredicateQuotedAtom()
         {
-            this.EvaluateAndCompare("(cons? 'a)", "nil");
+            this.EvaluateAndCompare("(cons? 'a)", "false");
         }
 
         [TestMethod]
         public void EvaluateConsPredicateQuotedList()
         {
-            this.EvaluateAndCompare("(cons? '(a))", "t");
+            this.EvaluateAndCompare("(cons? '(a))", "true");
         }
 
         [TestMethod]
         public void EvaluateConsPredicateCons()
         {
-            this.EvaluateAndCompare("(cons? (cons 'a '(b)))", "t");
+            this.EvaluateAndCompare("(cons? (cons 'a '(b)))", "true");
         }
 
         [TestMethod]
         public void EvaluateIdPredicateNil()
         {
-            this.EvaluateAndCompare("(id? nil)", "t");
+            this.EvaluateAndCompare("(id? nil)", "true");
         }
 
         [TestMethod]
         public void EvaluateIdPredicateTrue()
         {
-            this.EvaluateAndCompare("(id? t)", "t");
+            this.EvaluateAndCompare("(id? true)", "true");
         }
 
         [TestMethod]
         public void EvaluateIdPredicateQuotedAtom()
         {
-            this.EvaluateAndCompare("(id? 'a)", "t");
+            this.EvaluateAndCompare("(id? 'a)", "true");
         }
 
         [TestMethod]
         public void EvaluateIdPredicateQuotedList()
         {
-            this.EvaluateAndCompare("(id? '(a b))", "nil");
+            this.EvaluateAndCompare("(id? '(a b))", "false");
         }
 
         [TestMethod]
         public void EvaluateIdPredicateQuotedInteger()
         {
-            this.EvaluateAndCompare("(id? 1)", "nil");
+            this.EvaluateAndCompare("(id? 1)", "false");
         }
 
         [TestMethod]
         public void EvaluateIdPredicatePlus()
         {
-            this.EvaluateAndCompare("(id? (+ 1 2))", "nil");
+            this.EvaluateAndCompare("(id? (+ 1 2))", "false");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateNil()
         {
-            this.EvaluateAndCompare("(function? nil)", "nil");
+            this.EvaluateAndCompare("(function? nil)", "false");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateQuotedAtom()
         {
-            this.EvaluateAndCompare("(function? 'a)", "nil");
+            this.EvaluateAndCompare("(function? 'a)", "false");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateAtom()
         {
-            this.EvaluateAndCompare("(function? atom)", "t");
+            this.EvaluateAndCompare("(function? atom)", "true");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateLambda()
         {
-            this.EvaluateAndCompare("(function? (lambda (x) x))", "t");
+            this.EvaluateAndCompare("(function? (lambda (x) x))", "true");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateIf()
         {
-            this.EvaluateAndCompare("(function? if)", "t");
+            this.EvaluateAndCompare("(function? if)", "true");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateLambdaAtom()
         {
-            this.EvaluateAndCompare("(function? lambda)", "t");
+            this.EvaluateAndCompare("(function? lambda)", "true");
         }
 
         [TestMethod]
         public void EvaluateFunctionPredicateMacroLambda()
         {
-            this.EvaluateAndCompare("(function? mlambda)", "t");
+            this.EvaluateAndCompare("(function? mlambda)", "true");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicateNil()
         {
-            this.EvaluateAndCompare("(number? nil)", "nil");
+            this.EvaluateAndCompare("(number? nil)", "false");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicateTrue()
         {
-            this.EvaluateAndCompare("(number? t)", "nil");
+            this.EvaluateAndCompare("(number? t)", "false");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicateQuotedAtom()
         {
-            this.EvaluateAndCompare("(number? 'a)", "nil");
+            this.EvaluateAndCompare("(number? 'a)", "false");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicateQuotedList()
         {
-            this.EvaluateAndCompare("(number? '(a b))", "nil");
+            this.EvaluateAndCompare("(number? '(a b))", "false");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicateInteger()
         {
-            this.EvaluateAndCompare("(number? 1)", "t");
+            this.EvaluateAndCompare("(number? 1)", "true");
         }
 
         [TestMethod]
         public void EvaluateNumberPredicatePlus()
         {
-            this.EvaluateAndCompare("(number? (+ 1 2))", "t");
+            this.EvaluateAndCompare("(number? (+ 1 2))", "true");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateNilNil()
         {
-            this.EvaluateAndCompare("(eq nil nil)", "t");
+            this.EvaluateAndCompare("(eq nil nil)", "true");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateTrueTrue()
         {
-            this.EvaluateAndCompare("(eq t t)", "t");
+            this.EvaluateAndCompare("(eq t t)", "true");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateQuotedAtoms()
         {
-            this.EvaluateAndCompare("(eq 'a 'a)", "t");
+            this.EvaluateAndCompare("(eq 'a 'a)", "true");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateQuotedDifferentAtoms()
         {
-            this.EvaluateAndCompare("(eq 'a 'b)", "nil");
+            this.EvaluateAndCompare("(eq 'a 'b)", "false");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateIntegers()
         {
-            this.EvaluateAndCompare("(eq 12 20)", "nil");
+            this.EvaluateAndCompare("(eq 12 20)", "false");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateOneOne()
         {
-            this.EvaluateAndCompare("(eq 1 1)", "t");
+            this.EvaluateAndCompare("(eq 1 1)", "true");
         }
 
         [TestMethod]
         public void EvaluateEqPredicateIntegerPlus()
         {
-            this.EvaluateAndCompare("(eq 3 (+ 1 2))", "t");
+            this.EvaluateAndCompare("(eq 3 (+ 1 2))", "true");
         }
 
         [TestMethod]
         public void EvaluateGreaterPredicateTwoOne()
         {
-            this.EvaluateAndCompare("(greater 2 1)", "t");
+            this.EvaluateAndCompare("(greater 2 1)", "true");
         }
 
         [TestMethod]
         public void EvaluateGreaterPredicateOneTwo()
         {
-            this.EvaluateAndCompare("(greater 1 2)", "nil");
+            this.EvaluateAndCompare("(greater 1 2)", "false");
         }
 
         [TestMethod]
         public void EvaluateGreaterPredicateAtomsAB()
         {
-            this.EvaluateAndCompare("(greater 'a 'b)", "nil");
+            this.EvaluateAndCompare("(greater 'a 'b)", "false");
         }
 
         [TestMethod]
         public void EvaluateGreaterPredicateAtomsBA()
         {
-            this.EvaluateAndCompare("(greater 'b 'a)", "t");
+            this.EvaluateAndCompare("(greater 'b 'a)", "true");
         }
 
         [TestMethod]
         public void EvaluateLessPredicateTwoOne()
         {
-            this.EvaluateAndCompare("(less 2 1)", "nil");
+            this.EvaluateAndCompare("(less 2 1)", "false");
         }
 
         [TestMethod]
         public void EvaluateLessPredicateOneTwo()
         {
-            this.EvaluateAndCompare("(less 1 2)", "t");
+            this.EvaluateAndCompare("(less 1 2)", "true");
         }
 
         [TestMethod]
         public void EvaluateLessPredicateAtomsAB()
         {
-            this.EvaluateAndCompare("(less 'a 'b)", "t");
+            this.EvaluateAndCompare("(less 'a 'b)", "true");
         }
 
         [TestMethod]
         public void EvaluateLessPredicateAtomsBA()
         {
-            this.EvaluateAndCompare("(less 'b 'a)", "nil");
+            this.EvaluateAndCompare("(less 'b 'a)", "false");
         }
 
         [TestMethod]
         public void EvaluateProgNTrue()
         {
-            this.EvaluateAndCompare("(progn t)", "t");
+            this.EvaluateAndCompare("(progn true)", "true");
         }
 
         [TestMethod]
         public void EvaluateProgNNil()
         {
             this.EvaluateAndCompare("(progn nil)", "nil");
+        }
+
+        [TestMethod]
+        public void EvaluateProgNFalse()
+        {
+            this.EvaluateAndCompare("(progn false)", "false");
         }
 
         [TestMethod]
@@ -677,8 +695,9 @@
         {
             Machine machine = new Machine();
             machine.Evaluate("(definef choose (args) (if (eval (car args)) (eval (car (cdr args))) (eval (car (cdr (cdr args))))))");
-            this.EvaluateAndCompare(machine, "(choose t 'a 'b)", "a");
+            this.EvaluateAndCompare(machine, "(choose true 'a 'b)", "a");
             this.EvaluateAndCompare(machine, "(choose nil 'a 'b)", "b");
+            this.EvaluateAndCompare(machine, "(choose false 'a 'b)", "b");
         }
 
         [TestMethod]
@@ -716,19 +735,25 @@
         [TestMethod]
         public void EvaluateCondTrue()
         {
-            this.EvaluateAndCompare("(cond (t 1))", "1");
+            this.EvaluateAndCompare("(cond (true 1))", "1");
         }
 
         [TestMethod]
         public void EvaluateCondTrueMultiple()
         {
-            this.EvaluateAndCompare("(cond (t 1 2))", "2");
+            this.EvaluateAndCompare("(cond (true 1 2))", "2");
         }
 
         [TestMethod]
         public void EvaluateCondNilTrue()
         {
-            this.EvaluateAndCompare("(cond (nil 0) (t 1))", "1");
+            this.EvaluateAndCompare("(cond (nil 0) (true 1))", "1");
+        }
+
+        [TestMethod]
+        public void EvaluateCondFalseTrue()
+        {
+            this.EvaluateAndCompare("(cond (false 0) (true 1))", "1");
         }
 
         [TestMethod]
@@ -744,9 +769,15 @@
         }
 
         [TestMethod]
+        public void EvaluateIfFalse()
+        {
+            this.EvaluateAndCompare("(if false 'a 'b)", "b");
+        }
+
+        [TestMethod]
         public void EvaluateIfTrue()
         {
-            this.EvaluateAndCompare("(if t 'a 'b)", "a");
+            this.EvaluateAndCompare("(if true 'a 'b)", "a");
         }
 
         [TestMethod]
