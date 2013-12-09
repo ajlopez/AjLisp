@@ -46,7 +46,9 @@ namespace AjLisp
 
             this.Define("==", new SubrEq());
             this.Define("<", new SubrLess());
+            this.Define("<=", new SubrLessEqual());
             this.Define(">", new SubrGreater());
+            this.Define(">=", new SubrGreaterEqual());
 
             this.Define("+", new SubrPlus());
             this.Define("-", new SubrDifference());

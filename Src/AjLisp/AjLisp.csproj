@@ -70,6 +70,8 @@
     <Compile Include="Numbers.cs" />
     <Compile Include="Operations.cs" />
     <Compile Include="Predicates.cs" />
+    <Compile Include="Primitives\SubrLessEqual.cs" />
+    <Compile Include="Primitives\SubrGreaterEqual.cs" />
     <Compile Include="Primitives\SubrNilP.cs" />
     <Compile Include="Primitives\FSubrBackquote.cs" />
     <Compile Include="Primitives\FSubrTypeInvoke.cs" />

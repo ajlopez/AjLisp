@@ -493,6 +493,30 @@
         }
 
         [TestMethod]
+        public void EvaluateGreaterEqualPredicateOneTwo()
+        {
+            this.EvaluateAndCompare("(>= 1 2)", "false");
+        }
+
+        [TestMethod]
+        public void EvaluateGreaterEqualPredicateAtomsAB()
+        {
+            this.EvaluateAndCompare("(>= 'a 'b)", "false");
+        }
+
+        [TestMethod]
+        public void EvaluateGreaterEqualPredicateAtomsBA()
+        {
+            this.EvaluateAndCompare("(>= 'b 'a)", "true");
+        }
+
+        [TestMethod]
+        public void EvaluateGreaterEqualPredicateAtomsAA()
+        {
+            this.EvaluateAndCompare("(>= 'a 'a)", "true");
+        }
+
+        [TestMethod]
         public void EvaluateLessPredicateTwoOne()
         {
             this.EvaluateAndCompare("(< 2 1)", "false");
@@ -514,6 +538,36 @@
         public void EvaluateLessPredicateAtomsBA()
         {
             this.EvaluateAndCompare("(< 'b 'a)", "false");
+        }
+
+        [TestMethod]
+        public void EvaluateLessEqualPredicateTwoOne()
+        {
+            this.EvaluateAndCompare("(<= 2 1)", "false");
+        }
+
+        [TestMethod]
+        public void EvaluateLessEqualPredicateOneTwo()
+        {
+            this.EvaluateAndCompare("(<= 1 2)", "true");
+        }
+
+        [TestMethod]
+        public void EvaluateLessEqualPredicateAtomsAB()
+        {
+            this.EvaluateAndCompare("(<= 'a 'b)", "true");
+        }
+
+        [TestMethod]
+        public void EvaluateLessEqualPredicateAtomsBA()
+        {
+            this.EvaluateAndCompare("(<= 'b 'a)", "false");
+        }
+
+        [TestMethod]
+        public void EvaluateLessEqualPredicateAtomsAA()
+        {
+            this.EvaluateAndCompare("(<= 'a 'a)", "true");
         }
 
         [TestMethod]
