@@ -724,6 +724,14 @@
         }
 
         [TestMethod]
+        public void EvaluateDefineMMyMacro()
+        {
+            Machine machine = new Machine();
+            machine.Evaluate("(definem mymacro (x) (list 'first (list 'quote x)))");
+            this.EvaluateAndCompare(machine, "(mymacro (a))", "a");
+        }
+
+        [TestMethod]
         public void EvaluateSetAtom()
         {
             this.EvaluateAndCompare("(set 'a 'b)", "b");

@@ -18,7 +18,7 @@ namespace AjLisp.Primitives
             arglist = args.Next.First;
             body = args.Next.Next;
 
-            FSubrMacroClosure closure = new FSubrMacroClosure((Identifier)arglist, env, body);
+            FSubrMacroClosure closure = new FSubrMacroClosure(arglist, env, body);
 
             env.SetGlobalValue(atom.Name, closure);
 
