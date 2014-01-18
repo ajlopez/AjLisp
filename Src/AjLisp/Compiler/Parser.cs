@@ -5,6 +5,7 @@ namespace AjLisp.Compiler
     using System.Text;
 
     using AjLisp.Language;
+    using AjLisp.Primitives;
 
     public class Parser
     {
@@ -35,6 +36,15 @@ namespace AjLisp.Compiler
             }
 
             object first = this.CompileTerm();
+
+            if (first is Identifier)
+            {
+                var id = (Identifier)first;
+
+                if (id.Name.Length > 1 && id.Name.EndsWith("."))
+                    first = new SubrNew(id.Name.Substring(0, id.Name.Length - 1));
+            }
+
             object rest;
 
             if (this.NextTokenIs(TokenType.Name, "."))

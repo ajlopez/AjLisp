@@ -138,6 +138,12 @@
         }
 
         [TestMethod]
+        public void ParseQualifiedNameEndingWithDot()
+        {
+            this.Tokenize("System.IO.FileInfo.", TokenType.Name, "System.IO.FileInfo.");
+        }
+
+        [TestMethod]
         public void ParseSpecialCharsName()
         {
             this.Tokenize("==", TokenType.Name, "==");

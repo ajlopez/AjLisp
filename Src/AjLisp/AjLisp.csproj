@@ -70,6 +70,7 @@
     <Compile Include="Numbers.cs" />
     <Compile Include="Operations.cs" />
     <Compile Include="Predicates.cs" />
+    <Compile Include="Primitives\SubrNew.cs" />
     <Compile Include="Primitives\SubrLessEqual.cs" />
     <Compile Include="Primitives\SubrGreaterEqual.cs" />
     <Compile Include="Primitives\SubrNilP.cs" />

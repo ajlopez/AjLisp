@@ -4,6 +4,7 @@ namespace AjLisp.Language
     using System.Collections;
     using System.Collections.Generic;
     using System.Diagnostics;
+    using System.Linq;
     using System.Text;
 
     public class List : IExpression
@@ -53,6 +54,20 @@ namespace AjLisp.Language
                 throw new InvalidOperationException(string.Format("Unknown form '{0}'", this.first.ToString()));
 
             return function.Apply(this.Next, environment);
+        }
+
+        public object[] ToArray()
+        {
+            IList<object> values = new List<object>();
+            var list = this;
+
+            while (list != null)
+            {
+                values.Add(list.First);
+                list = list.Next;
+            }
+
+            return values.ToArray();
         }
 
         // TODO use StringBuilder

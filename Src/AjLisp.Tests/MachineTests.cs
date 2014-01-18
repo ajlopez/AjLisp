@@ -985,6 +985,24 @@
             Assert.AreEqual(1, machine.Evaluate("one"));
         }
 
+        [TestMethod]
+        public void EvaluateNewDataSet()
+        {
+            var result = this.Evaluate("(System.Data.DataSet.)");
+
+            Assert.IsNotNull(result);
+            Assert.IsInstanceOfType(result, typeof(System.Data.DataSet));
+        }
+
+        [TestMethod]
+        public void EvaluateNewFileInfo()
+        {
+            var result = this.Evaluate("(System.IO.FileInfo. \"foo.txt\")");
+
+            Assert.IsNotNull(result);
+            Assert.IsInstanceOfType(result, typeof(System.IO.FileInfo));
+        }
+
         private object Evaluate(string text)
         {
             Machine machine = new Machine();
