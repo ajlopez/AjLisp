@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+    using AjLisp.Utilities;
 
     public class RationalNumber
     {
@@ -121,7 +122,7 @@
 
         public override int GetHashCode()
         {
-            return Utilities.CombineHash(this.numerator.GetHashCode(), this.denominator.GetHashCode());
+            return HashUtilities.CombineHash(this.numerator.GetHashCode(), this.denominator.GetHashCode());
         }
     }
 }

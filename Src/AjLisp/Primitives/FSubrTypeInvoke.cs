@@ -5,6 +5,7 @@ namespace AjLisp.Primitives
     using System.Text;
 
     using AjLisp.Language;
+    using AjLisp.Utilities;
 
     public class FSubrTypeInvoke : FSubr
     {

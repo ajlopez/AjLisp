@@ -68,6 +68,7 @@
     <Compile Include="Language\RationalNumber.cs" />
     <Compile Include="MacroUtilities.cs" />
     <Compile Include="Numbers.cs" />
+    <Compile Include="Utilities\ObjectUtilities.cs" />
     <Compile Include="Operations.cs" />
     <Compile Include="Predicates.cs" />
     <Compile Include="Primitives\SubrNew.cs" />
@@ -102,8 +103,8 @@
     <Compile Include="Primitives\FSubrQuote.cs" />
     <Compile Include="Primitives\Subr.cs" />
     <Compile Include="Compiler\Lexer.cs" />
-    <Compile Include="TypeUtilities.cs" />
-    <Compile Include="Utilities.cs" />
+    <Compile Include="Utilities\TypeUtilities.cs" />
+    <Compile Include="Utilities\HashUtilities.cs" />
     <Compile Include="ValueEnvironment.cs" />
     <Compile Include="Machine.cs" />
     <Compile Include="Primitives\SubrAppend.cs" />

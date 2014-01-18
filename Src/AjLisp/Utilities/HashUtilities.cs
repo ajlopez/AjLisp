@@ -1,4 +1,4 @@
-﻿namespace AjLisp
+﻿namespace AjLisp.Utilities
 {
     using System;
     using System.Collections;
@@ -6,7 +6,7 @@
     using System.Linq;
     using System.Text;
 
-    public static class Utilities
+    public static class HashUtilities
     {
         public static int Hash(object obj)
         {
