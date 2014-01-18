@@ -1,4 +1,4 @@
-﻿namespace AjLisp.Tests
+﻿namespace AjLisp.Tests.Compiler
 {
     using System;
     using System.Collections.Generic;
