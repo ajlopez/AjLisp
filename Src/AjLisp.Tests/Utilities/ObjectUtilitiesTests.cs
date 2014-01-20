@@ -19,6 +19,12 @@
         }
 
         [TestMethod]
+        public void CallMethod()
+        {
+            Assert.AreEqual("foo", ObjectUtilities.GetValue("foo", "ToString"));
+        }
+
+        [TestMethod]
         public void GetValueUsingCall()
         {
             Assert.AreEqual("oo", ObjectUtilities.GetValue("foo", "Substring", new object[] { 1 }));

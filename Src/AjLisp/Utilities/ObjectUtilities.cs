@@ -19,16 +19,7 @@
 
         public static object GetValue(object obj, string name)
         {
-            Type type = obj.GetType();
-
-            try
-            {
-                return type.InvokeMember(name, System.Reflection.BindingFlags.GetProperty | System.Reflection.BindingFlags.GetField | System.Reflection.BindingFlags.IgnoreCase | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | /* System.Reflection.BindingFlags.InvokeMethod | */ System.Reflection.BindingFlags.Instance, null, obj, null);
-            }
-            catch
-            {
-                return type.GetMethod(name);
-            }
+            return GetNativeValue(obj, name, null);
         }
 
         public static object GetValue(object obj, string name, IList<object> arguments)
