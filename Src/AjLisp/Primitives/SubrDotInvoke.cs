@@ -7,23 +7,24 @@ namespace AjLisp.Primitives
     using AjLisp.Language;
     using AjLisp.Utilities;
 
-    public class SubrNew : Subr
+    public class SubrDotInvoke : Subr
     {
         private string name;
-        private Type type;
 
-        public SubrNew(string name)
+        public SubrDotInvoke(string name)
         {
             this.name = name;
-            this.type = TypeUtilities.AsType(name);
         }
 
         public override object Execute(List arguments, ValueEnvironment environment)
         {
-            if (arguments == null)
-                return Activator.CreateInstance(this.type);
+            var target = arguments.First;
+            IList<object> args = null;
+            
+            if (arguments.Next != null)
+                args = arguments.Next.ToObjectArray();
 
-            return Activator.CreateInstance(this.type, arguments.ToObjectArray());
+            return ObjectUtilities.GetNativeValue(target, this.name, args);
         }
     }
 }

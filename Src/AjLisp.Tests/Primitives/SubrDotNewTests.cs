@@ -9,12 +9,12 @@
     using AjLisp.Language;
 
     [TestClass]
-    public class SubrNewTests
+    public class SubrDotNewTests
     {
         [TestMethod]
         public void CreateDataset()
         {
-            SubrNew snew = new SubrNew("System.Data.DataSet");
+            SubrDotNew snew = new SubrDotNew("System.Data.DataSet");
 
             var result = snew.Execute(null, null);
 
@@ -25,7 +25,7 @@
         [TestMethod]
         public void CreateFileInfo()
         {
-            SubrNew snew = new SubrNew("System.IO.FileInfo");
+            SubrDotNew snew = new SubrDotNew("System.IO.FileInfo");
             var list = List.Create(new string[] { "foo.txt" });
 
             var result = snew.Execute(list, null);

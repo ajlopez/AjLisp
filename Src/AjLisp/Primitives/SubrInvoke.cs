@@ -5,6 +5,7 @@ namespace AjLisp.Primitives
     using System.Text;
 
     using AjLisp.Language;
+    using AjLisp.Utilities;
 
     public class SubrInvoke : Subr
     {
@@ -20,9 +21,7 @@ namespace AjLisp.Primitives
             if (arglist != null)
                 parameters = arglist.ToObjectArray();
 
-            Type type = obj.GetType();
-
-            return type.InvokeMember(methodName, System.Reflection.BindingFlags.GetProperty | System.Reflection.BindingFlags.IgnoreCase | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.InvokeMethod | System.Reflection.BindingFlags.Instance, null, obj, parameters);
+            return ObjectUtilities.GetNativeValue(obj, methodName, parameters);
         }
     }
 }
