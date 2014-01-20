@@ -41,8 +41,11 @@ namespace AjLisp.Compiler
             {
                 var id = (Identifier)first;
 
-                if (id.Name.Length > 1 && id.Name.EndsWith("."))
-                    first = new SubrDotNew(id.Name.Substring(0, id.Name.Length - 1));
+                if (id.Name.Length > 1)
+                    if (id.Name.EndsWith("."))
+                        first = new SubrDotNew(id.Name.Substring(0, id.Name.Length - 1));
+                    else if (id.Name.StartsWith("."))
+                        first = new SubrDotInvoke(id.Name.Substring(1));
             }
 
             object rest;

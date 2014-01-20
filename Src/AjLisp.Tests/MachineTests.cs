@@ -1003,6 +1003,33 @@
             Assert.IsInstanceOfType(result, typeof(System.IO.FileInfo));
         }
 
+        [TestMethod]
+        public void EvaluateProperty()
+        {
+            var result = this.Evaluate("(.Length \"foo\")");
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(3, result);
+        }
+
+        [TestMethod]
+        public void EvaluateMethod()
+        {
+            var result = this.Evaluate("(.ToString 123)");
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual("123", result);
+        }
+
+        [TestMethod]
+        public void EvaluateMethodWithArguments()
+        {
+            var result = this.Evaluate("(.Substring \"foobarfoo\" 3 3)");
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual("bar", result);
+        }
+
         private object Evaluate(string text)
         {
             Machine machine = new Machine();

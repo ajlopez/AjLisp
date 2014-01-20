@@ -144,6 +144,12 @@
         }
 
         [TestMethod]
+        public void ParseNameStartingWithDot()
+        {
+            this.Tokenize(".Length", TokenType.Name, ".Length");
+        }
+
+        [TestMethod]
         public void ParseSpecialCharsName()
         {
             this.Tokenize("==", TokenType.Name, "==");

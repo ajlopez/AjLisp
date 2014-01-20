@@ -50,7 +50,7 @@ namespace AjLisp.Compiler
                 ch = this.NextCharSkipBlanks();
 
                 if (char.IsLetter(ch) | ch == '_')
-                    return this.NextName(ch);
+                    return this.NextName(ch.ToString());
 
                 if (Separators.IndexOf(ch) >= 0)
                     return this.NextSeparator(ch);
@@ -62,7 +62,22 @@ namespace AjLisp.Compiler
                     return new Token() { Type = TokenType.Name, Value = "'" };
 
                 if (ch == '.')
+                {
+                    try
+                    {
+                        char ch2 = this.NextChar();
+
+                        if (char.IsLetter(ch2))
+                            return this.NextName(ch.ToString() + ch2.ToString());
+
+                        this.PushChar(ch2);
+                    }
+                    catch (EndOfInputException ex)
+                    {
+                    }
+
                     return new Token() { Type = TokenType.Name, Value = "." };
+                }
 
                 if (ch == '`')
                     return new Token() { Type = TokenType.Name, Value = "`" };
@@ -157,11 +172,11 @@ namespace AjLisp.Compiler
             return ch;
         }
 
-        private Token NextName(char firstChar)
+        private Token NextName(string firsts)
         {
             string name;
 
-            name = firstChar.ToString();
+            name = firsts;
 
             char ch;
 
