@@ -23,7 +23,7 @@ namespace AjLisp.Primitives
             if (arguments == null)
                 return Activator.CreateInstance(this.type);
 
-            return Activator.CreateInstance(this.type, arguments.ToArray());
+            return Activator.CreateInstance(this.type, arguments.ToObjectArray());
         }
     }
 }

@@ -56,20 +56,6 @@ namespace AjLisp.Language
             return function.Apply(this.Next, environment);
         }
 
-        public object[] ToArray()
-        {
-            IList<object> values = new List<object>();
-            var list = this;
-
-            while (list != null)
-            {
-                values.Add(list.First);
-                list = list.Next;
-            }
-
-            return values.ToArray();
-        }
-
         // TODO use StringBuilder
         public override string ToString()
         {
