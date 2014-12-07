@@ -72,7 +72,7 @@ namespace AjLisp.Compiler
 
                         this.PushChar(ch2);
                     }
-                    catch (EndOfInputException ex)
+                    catch (EndOfInputException)
                     {
                     }
 

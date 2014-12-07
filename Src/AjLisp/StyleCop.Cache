@@ -3,13 +3,34 @@
   <project key="-1066002530">
     <configuration>DEBUG;TRACE</configuration>
   </project>
+  <sourcecode name="SubrNull.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/16/2009 21:47:33</timestamp>
+    <milliseconds>69</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Utilities.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/16/2009 21:47:33</timestamp>
+    <milliseconds>279</milliseconds>
+    <violations />
+  </sourcecode>
+  <project key="-368522783">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
   <sourcecode name="Parser.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>12/20/2009 16:18:57</timestamp>
-    <milliseconds>455</milliseconds>
+    <timestamp>01/20/2014 07:53:05</timestamp>
+    <milliseconds>286</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="Lexer.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -17,8 +38,17 @@
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>12/20/2009 16:18:57</timestamp>
-    <milliseconds>458</milliseconds>
+    <timestamp>12/07/2014 11:43:50</timestamp>
+    <milliseconds>753</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Conversions.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 16:40:54</timestamp>
+    <milliseconds>369</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="Identifier.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -48,13 +78,40 @@
     <milliseconds>411</milliseconds>
     <violations />
   </sourcecode>
+  <sourcecode name="List.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>01/20/2014 07:41:17</timestamp>
+    <milliseconds>595</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="RationalNumber.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>01/18/2014 13:57:44</timestamp>
+    <milliseconds>287</milliseconds>
+    <violations />
+  </sourcecode>
   <sourcecode name="Machine.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>02/21/2010 14:16:52</timestamp>
-    <milliseconds>940</milliseconds>
+    <timestamp>01/18/2014 10:02:24</timestamp>
+    <milliseconds>459</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="MacroUtilities.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:51:30</timestamp>
+    <milliseconds>661</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="Operations.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -73,6 +130,15 @@
     </settings>
     <timestamp>12/16/2009 21:47:33</timestamp>
     <milliseconds>276</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Predicates.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:51:30</timestamp>
+    <milliseconds>648</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="FSubr.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -111,6 +177,33 @@
     <milliseconds>869</milliseconds>
     <violations />
   </sourcecode>
+  <sourcecode name="FSubrDefine.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:51:30</timestamp>
+    <milliseconds>629</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="FSubrDefineF.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:51:30</timestamp>
+    <milliseconds>617</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="FSubrDefineM.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>01/18/2014 10:02:24</timestamp>
+    <milliseconds>500</milliseconds>
+    <violations />
+  </sourcecode>
   <sourcecode name="FSubrFExpr.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
@@ -118,6 +211,24 @@
     </settings>
     <timestamp>12/16/2009 21:47:33</timestamp>
     <milliseconds>30</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="FSubrDefineN.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:51:30</timestamp>
+    <milliseconds>550</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="FSubrFLambda.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:51:30</timestamp>
+    <milliseconds>587</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="FSubrIf.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -138,6 +249,15 @@
     <milliseconds>104</milliseconds>
     <violations />
   </sourcecode>
+  <sourcecode name="FSubrLetS.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:51:30</timestamp>
+    <milliseconds>562</milliseconds>
+    <violations />
+  </sourcecode>
   <sourcecode name="FSubrMacroClosure.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
@@ -145,6 +265,15 @@
     </settings>
     <timestamp>12/16/2009 21:47:33</timestamp>
     <milliseconds>54</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="FSubrLet.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:51:30</timestamp>
+    <milliseconds>574</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="FSubrMExpr.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -156,13 +285,31 @@
     <milliseconds>136</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="FSubrNew.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+  <sourcecode name="FSubrMLambda.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>131</milliseconds>
+    <milliseconds>48</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="FSubrNew.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>01/18/2014 13:57:30</timestamp>
+    <milliseconds>349</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="FSubrNLambda.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:52:00</timestamp>
+    <milliseconds>525</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="FSubrProgN.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -192,6 +339,15 @@
     <milliseconds>101</milliseconds>
     <violations />
   </sourcecode>
+  <sourcecode name="FSubrTypeInvoke.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>01/18/2014 13:57:30</timestamp>
+    <milliseconds>371</milliseconds>
+    <violations />
+  </sourcecode>
   <sourcecode name="Subr.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
@@ -201,13 +357,13 @@
     <milliseconds>87</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="FSubrMLambda.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+  <sourcecode name="SubrAppend.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>48</milliseconds>
+    <timestamp>12/08/2013 06:52:00</timestamp>
+    <milliseconds>534</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="SubrAtom.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -228,15 +384,6 @@
     <milliseconds>148</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="SubrCons.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>139</milliseconds>
-    <violations />
-  </sourcecode>
   <sourcecode name="SubrClosure.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
@@ -246,6 +393,24 @@
     <milliseconds>163</milliseconds>
     <violations />
   </sourcecode>
+  <sourcecode name="SubrCons.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/16/2009 21:47:33</timestamp>
+    <milliseconds>139</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SubrConsP.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/16/2009 21:47:33</timestamp>
+    <milliseconds>93</milliseconds>
+    <violations />
+  </sourcecode>
   <sourcecode name="SubrDifference.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
@@ -253,6 +418,24 @@
     </settings>
     <timestamp>12/16/2009 21:47:33</timestamp>
     <milliseconds>32</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SubrDotInvoke.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>01/20/2014 07:44:49</timestamp>
+    <milliseconds>68</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SubrDotNew.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>01/20/2014 07:42:17</timestamp>
+    <milliseconds>655</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="SubrEq.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -273,15 +456,6 @@
     <milliseconds>110</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="SubrConsP.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>93</milliseconds>
-    <violations />
-  </sourcecode>
   <sourcecode name="SubrFirst.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
@@ -289,6 +463,24 @@
     </settings>
     <timestamp>12/16/2009 21:47:33</timestamp>
     <milliseconds>107</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SubrExpr.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:51:30</timestamp>
+    <milliseconds>538</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SubrGreater.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/16/2009 21:47:33</timestamp>
+    <milliseconds>112</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="SubrFunctionP.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -300,13 +492,13 @@
     <milliseconds>60</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="SubrGreater.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+  <sourcecode name="SubrGreaterEqual.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>112</milliseconds>
+    <timestamp>01/18/2014 10:02:24</timestamp>
+    <milliseconds>501</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="SubrIdP.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -323,8 +515,26 @@
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>36</milliseconds>
+    <timestamp>01/20/2014 07:49:44</timestamp>
+    <milliseconds>157</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SubrLess.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/08/2013 06:51:30</timestamp>
+    <milliseconds>524</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SubrLessEqual.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>01/18/2014 10:02:24</timestamp>
+    <milliseconds>501</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="SubrList.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -336,15 +546,6 @@
     <milliseconds>72</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="SubrNExpr.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>39</milliseconds>
-    <violations />
-  </sourcecode>
   <sourcecode name="SubrNClosure.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
@@ -352,6 +553,15 @@
     </settings>
     <timestamp>12/16/2009 21:47:33</timestamp>
     <milliseconds>27</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SubrNExpr.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/16/2009 21:47:33</timestamp>
+    <milliseconds>39</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="SubrNilP.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -363,15 +573,6 @@
     <milliseconds>791</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="SubrNull.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>69</milliseconds>
-    <violations />
-  </sourcecode>
   <sourcecode name="SubrNumberP.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
@@ -381,15 +582,6 @@
     <milliseconds>66</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="SubrQuotient.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>160</milliseconds>
-    <violations />
-  </sourcecode>
   <sourcecode name="SubrPlus.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
@@ -397,6 +589,15 @@
     </settings>
     <timestamp>12/16/2009 21:47:33</timestamp>
     <milliseconds>96</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SubrQuotient.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>06/30/2010 11:43:56</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>12/16/2009 21:47:33</timestamp>
+    <milliseconds>160</milliseconds>
     <violations />
   </sourcecode>
   <sourcecode name="SubrRemainder.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
@@ -444,33 +645,6 @@
     <milliseconds>84</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="TypeUtilities.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/12/2009 11:52:34</timestamp>
-    <milliseconds>602</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="Utilities.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>279</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="ValueEnvironment.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/16/2009 21:47:33</timestamp>
-    <milliseconds>297</milliseconds>
-    <violations />
-  </sourcecode>
   <sourcecode name="AssemblyInfo.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
@@ -480,160 +654,40 @@
     <milliseconds>609</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="Conversions.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+  <sourcecode name="HashUtilities.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>690</milliseconds>
+    <timestamp>01/18/2014 13:57:09</timestamp>
+    <milliseconds>597</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="RationalNumber.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+  <sourcecode name="ObjectUtilities.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>676</milliseconds>
+    <timestamp>01/20/2014 07:35:55</timestamp>
+    <milliseconds>484</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="List.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+  <sourcecode name="TypeUtilities.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>701</milliseconds>
+    <timestamp>01/18/2014 13:57:02</timestamp>
+    <milliseconds>859</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="MacroUtilities.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
+  <sourcecode name="ValueEnvironment.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
     <settings>
       <timestamp>06/30/2010 11:43:56</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>661</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="FSubrDefine.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>629</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="FSubrDefineF.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>617</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="Predicates.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>648</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="FSubrDefineM.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>600</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="FSubrDefineN.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>550</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="FSubrFLambda.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>587</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="FSubrLet.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>574</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="FSubrLetS.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>562</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="SubrExpr.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>538</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="SubrLess.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:51:30</timestamp>
-    <milliseconds>524</milliseconds>
-    <violations />
-  </sourcecode>
-  <project key="-368522783">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
-  <sourcecode name="FSubrNLambda.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:52:00</timestamp>
-    <milliseconds>525</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="FSubrTypeInvoke.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:52:00</timestamp>
-    <milliseconds>530</milliseconds>
-    <violations />
-  </sourcecode>
-  <sourcecode name="SubrAppend.cs" parser="Microsoft.StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>06/30/2010 11:43:56</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>12/08/2013 06:52:00</timestamp>
-    <milliseconds>534</milliseconds>
+    <timestamp>12/16/2009 21:47:33</timestamp>
+    <milliseconds>297</milliseconds>
     <violations />
   </sourcecode>
 </stylecopresultscache>

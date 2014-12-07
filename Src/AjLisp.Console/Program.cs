@@ -1,19 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
-
-using AjLisp;
-using AjLisp.Language;
-using AjLisp.Compiler;
-
 namespace AjLisp.Console
 {
-    class Program
-    {
-        static Machine intr = new Machine();
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Text;
+    using AjLisp;
+    using AjLisp.Compiler;
+    using AjLisp.Language;
 
-        static void ProcessFile(string filename)
+    public class Program
+    {
+        private static Machine intr = new Machine();
+
+        public static void ProcessFile(string filename)
         {
             try
             {
@@ -26,6 +25,7 @@ namespace AjLisp.Console
                     sexpr = cmp.Compile();
                     intr.Evaluate(sexpr);
                 }
+
                 tr.Close();
             }
             catch (Exception ex)
@@ -34,7 +34,7 @@ namespace AjLisp.Console
             }
         }
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             foreach (string filename in args)
             {

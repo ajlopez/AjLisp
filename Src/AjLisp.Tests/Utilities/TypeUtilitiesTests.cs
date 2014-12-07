@@ -3,13 +3,13 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Reflection;
     using System.Text;
     using AjLisp;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using AjLisp.Utilities;
     using AjLisp.Compiler;
-    using System.Reflection;
     using AjLisp.Tests.Classes;
+    using AjLisp.Utilities;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class TypeUtilitiesTests

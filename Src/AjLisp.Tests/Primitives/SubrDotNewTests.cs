@@ -1,12 +1,12 @@
 ﻿namespace AjLisp.Tests.Primitives
 {
     using System;
-    using System.Text;
     using System.Collections.Generic;
     using System.Linq;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using AjLisp.Primitives;
+    using System.Text;
     using AjLisp.Language;
+    using AjLisp.Primitives;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class SubrDotNewTests
