@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjLisp", "AjLisp\AjLisp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjLisp.Console", "AjLisp.Console\AjLisp.Console.csproj", "{D1136EC3-9C6A-4998-8A41-9C5C3E70BF73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjLisp.Tests", "AjLisp.Tests\AjLisp.Tests.csproj", "{2CB2C696-AA85-4978-A66B-AD5737D551AD}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = AjLisp.vsmdi
@@ -29,6 +31,10 @@ Global
 		{D1136EC3-9C6A-4998-8A41-9C5C3E70BF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1136EC3-9C6A-4998-8A41-9C5C3E70BF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1136EC3-9C6A-4998-8A41-9C5C3E70BF73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB2C696-AA85-4978-A66B-AD5737D551AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB2C696-AA85-4978-A66B-AD5737D551AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB2C696-AA85-4978-A66B-AD5737D551AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB2C696-AA85-4978-A66B-AD5737D551AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
