@@ -43,81 +43,71 @@ namespace AjLisp.Compiler
                 return this.lastToken;
             }
 
-            char ch;
+            char? nch = this.NextCharSkipBlanks();
 
-            try
-            {
-                ch = this.NextCharSkipBlanks();
-
-                if (char.IsLetter(ch) | ch == '_')
-                    return this.NextName(ch.ToString());
-
-                if (Separators.IndexOf(ch) >= 0)
-                    return this.NextSeparator(ch);
-
-                if (ch == '"')
-                    return this.NextString();
-
-                if (ch == '\'')
-                    return new Token() { Type = TokenType.Name, Value = "'" };
-
-                if (ch == '.')
-                {
-                    try
-                    {
-                        char ch2 = this.NextChar();
-
-                        if (char.IsLetter(ch2))
-                            return this.NextName(ch.ToString() + ch2.ToString());
-
-                        this.PushChar(ch2);
-                    }
-                    catch (EndOfInputException)
-                    {
-                    }
-
-                    return new Token() { Type = TokenType.Name, Value = "." };
-                }
-
-                if (ch == '`')
-                    return new Token() { Type = TokenType.Name, Value = "`" };
-
-                if (ch == '-')
-                {
-                    try
-                    {
-                        char ch2 = this.NextChar();
-
-                        if (char.IsDigit(ch2))
-                        {
-                            Token token = this.NextInteger(ch2);
-
-                            if (token.Value is int)
-                                token.Value = -((int)token.Value);
-                            if (token.Value is double)
-                                token.Value = -((double)token.Value);
-
-                            return token;
-                        }
-
-                        this.PushChar(ch2);
-                    }
-                    catch (EndOfInputException)
-                    {
-                    }
-
-                    return new Token() { Type = TokenType.Name, Value = "-" };
-                }
-
-                if (char.IsDigit(ch))
-                    return this.NextInteger(ch);
-
-                return this.NextSpecialName(ch);
-            }
-            catch (EndOfInputException)
-            {
+            if (!nch.HasValue)
                 return null;
+
+            char ch = nch.Value;
+
+            if (char.IsLetter(ch) | ch == '_')
+                return this.NextName(ch.ToString());
+
+            if (Separators.IndexOf(ch) >= 0)
+                return this.NextSeparator(ch);
+
+            if (ch == '"')
+                return this.NextString();
+
+            if (ch == '\'')
+                return new Token() { Type = TokenType.Name, Value = "'" };
+
+            if (ch == '.')
+            {
+                char? ch2 = this.NextChar();
+
+                if (ch2.HasValue)
+                {
+                    if (char.IsLetter(ch2.Value))
+                        return this.NextName(ch.ToString() + ch2.Value.ToString());
+
+                    this.PushChar(ch2.Value);
+                }
+
+                return new Token() { Type = TokenType.Name, Value = "." };
             }
+
+            if (ch == '`')
+                return new Token() { Type = TokenType.Name, Value = "`" };
+
+            if (ch == '-')
+            {
+                char? ch2 = this.NextChar();
+
+                if (ch2.HasValue)
+                {
+                    if (char.IsDigit(ch2.Value))
+                    {
+                        Token token = this.NextInteger(ch2.Value);
+
+                        if (token.Value is int)
+                            token.Value = -((int)token.Value);
+                        if (token.Value is double)
+                            token.Value = -((double)token.Value);
+
+                        return token;
+                    }
+
+                    this.PushChar(ch2.Value);
+                }
+
+                return new Token() { Type = TokenType.Name, Value = "-" };
+            }
+
+            if (char.IsDigit(ch))
+                return this.NextInteger(ch);
+
+            return this.NextSpecialName(ch);
         }
 
         internal void PushToken(Token token)
@@ -132,7 +122,7 @@ namespace AjLisp.Compiler
             this.hasChar = true;
         }
 
-        private char NextChar()
+        private char? NextChar()
         {
             if (this.hasChar)
             {
@@ -145,28 +135,28 @@ namespace AjLisp.Compiler
             ch = this.input.Read();
 
             if (ch < 0)
-                throw new EndOfInputException();
+                return null;
 
             return (char)ch;
         }
 
         private void SkipToControl()
         {
-            char ch;
+            char? ch;
 
             ch = this.NextChar();
 
-            while (!char.IsControl(ch))
+            while (ch.HasValue && !char.IsControl(ch.Value))
                 ch = this.NextChar();
         }
 
-        private char NextCharSkipBlanks()
+        private char? NextCharSkipBlanks()
         {
-            char ch;
+            char? ch;
 
             ch = this.NextChar();
 
-            while (char.IsWhiteSpace(ch))
+            while (ch.HasValue && char.IsWhiteSpace(ch.Value))
                 ch = this.NextChar();
 
             return ch;
@@ -178,23 +168,18 @@ namespace AjLisp.Compiler
 
             name = firsts;
 
-            char ch;
+            char? ch;
 
-            try
+            ch = this.NextChar();
+
+            while (ch.HasValue && !char.IsWhiteSpace(ch.Value) && Separators.IndexOf(ch.Value) < 0)
             {
+                name += ch;
                 ch = this.NextChar();
-
-                while (!char.IsWhiteSpace(ch) && Separators.IndexOf(ch) < 0)
-                {
-                    name += ch;
-                    ch = this.NextChar();
-                }
-
-                this.PushChar(ch);
             }
-            catch (EndOfInputException)
-            {
-            }
+
+            if (ch.HasValue)
+                this.PushChar(ch.Value);
 
             Token token = new Token();
             token.Type = TokenType.Name;
@@ -208,23 +193,18 @@ namespace AjLisp.Compiler
 
             name = firstChar.ToString();
 
-            char ch;
+            char? ch;
 
-            try
+            ch = this.NextChar();
+
+            while (ch.HasValue && !char.IsWhiteSpace(ch.Value) && !char.IsLetterOrDigit(ch.Value) && Separators.IndexOf(ch.Value) < 0)
             {
+                name += ch;
                 ch = this.NextChar();
-
-                while (!char.IsWhiteSpace(ch) && !char.IsLetterOrDigit(ch) && Separators.IndexOf(ch) < 0)
-                {
-                    name += ch;
-                    ch = this.NextChar();
-                }
-
-                this.PushChar(ch);
             }
-            catch (EndOfInputException)
-            {
-            }
+
+            if (ch.HasValue)
+                this.PushChar(ch.Value);
 
             Token token = new Token();
             token.Type = TokenType.Name;
@@ -235,13 +215,13 @@ namespace AjLisp.Compiler
         private Token NextString()
         {
             string value = string.Empty;
-            char ch;
+            char? ch;
 
             ch = this.NextChar();
 
-            while (ch != '"')
+            while (ch.HasValue && ch != '"')
             {
-                value += ch;
+                value += ch.Value;
                 ch = this.NextChar();
             }
 
@@ -258,18 +238,18 @@ namespace AjLisp.Compiler
 
             value = new string(firstDigit, 1);
 
-            char ch;
+            char? ch;
 
-            try
+            ch = this.NextChar();
+
+            while (ch.HasValue && char.IsDigit(ch.Value))
             {
+                value += ch.Value;
                 ch = this.NextChar();
+            }
 
-                while (char.IsDigit(ch))
-                {
-                    value += ch;
-                    ch = this.NextChar();
-                }
-
+            if (ch.HasValue)
+            {
                 if (ch == '.')
                 {
                     value += ch;
@@ -279,10 +259,7 @@ namespace AjLisp.Compiler
                 if (ch == '/')
                     return this.NextRationalNumber(Convert.ToInt64(value, System.Globalization.CultureInfo.InvariantCulture));
 
-                this.PushChar(ch);
-            }
-            catch (EndOfInputException)
-            {
+                this.PushChar(ch.Value);
             }
 
             Token token = new Token();
@@ -303,23 +280,18 @@ namespace AjLisp.Compiler
         {
             string value = string.Empty;
 
-            char ch;
+            char? ch;
 
-            try
+            ch = this.NextChar();
+
+            while (ch.HasValue && char.IsDigit(ch.Value))
             {
+                value += ch;
                 ch = this.NextChar();
-
-                while (char.IsDigit(ch))
-                {
-                    value += ch;
-                    ch = this.NextChar();
-                }
-
-                this.PushChar(ch);
             }
-            catch (EndOfInputException)
-            {
-            }
+
+            if (ch.HasValue)
+            this.PushChar(ch.Value);
 
             Token token = new Token();
 
@@ -334,23 +306,18 @@ namespace AjLisp.Compiler
 
         private Token NextReal(string value)
         {
-            char ch;
+            char? ch;
 
-            try
-            {
                 ch = this.NextChar();
 
-                while (char.IsDigit(ch))
-                {
-                    value += ch;
-                    ch = this.NextChar();
-                }
-
-                this.PushChar(ch);
-            }
-            catch (EndOfInputException)
+            while (ch.HasValue && char.IsDigit(ch.Value))
             {
+                value += ch;
+                ch = this.NextChar();
             }
+
+            if (ch.HasValue)
+                this.PushChar(ch.Value);
 
             Token token = new Token();
 
@@ -374,14 +341,6 @@ namespace AjLisp.Compiler
         public TokenType Type { get; set; }
 
         public object Value { get; set; }
-    }
-
-    public class EndOfInputException : Exception
-    {
-        public EndOfInputException()
-            : base("End of Input")
-        {
-        }
     }
 
     public class TokenizerException : Exception
