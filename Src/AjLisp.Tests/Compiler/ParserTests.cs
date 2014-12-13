@@ -102,15 +102,15 @@
         }
 
         [TestMethod]
-        public void ParseCommaName()
+        public void ParseUnquoteName()
         {
-            this.ParseAndCompare(",foo", "(comma foo)");
+            this.ParseAndCompare("~foo", "(unquote foo)");
         }
 
         [TestMethod]
-        public void ParseCommaAtName()
+        public void ParseUnquoteSpliceName()
         {
-            this.ParseAndCompare(",@foo", "(comma-at foo)");
+            this.ParseAndCompare("~@foo", "(unquote-splice foo)");
         }
 
         [TestMethod]

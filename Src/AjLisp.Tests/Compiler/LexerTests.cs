@@ -164,27 +164,27 @@
         }
 
         [TestMethod]
-        public void ParseComma()
+        public void ParseUnquote()
         {
-            this.Tokenize(",", TokenType.Name, ",");
+            this.Tokenize("~", TokenType.Name, "~");
         }
 
         [TestMethod]
-        public void ParseCommaAt()
+        public void ParseUnquoteSplice()
         {
-            this.Tokenize(",@", TokenType.Name, ",@");
+            this.Tokenize("~@", TokenType.Name, "~@");
         }
 
         [TestMethod]
-        public void ParseCommaAndName()
+        public void ParseUnquoteAndName()
         {
-            this.Tokenize(",foo", TokenType.Name, ",", TokenType.Name, "foo");
+            this.Tokenize("~foo", TokenType.Name, "~", TokenType.Name, "foo");
         }
 
         [TestMethod]
-        public void ParseCommaAtAndName()
+        public void ParseUnquoteSpliceAndName()
         {
-            this.Tokenize(",@foo", TokenType.Name, ",@", TokenType.Name, "foo");
+            this.Tokenize("~@foo", TokenType.Name, "~@", TokenType.Name, "foo");
         }
 
         [TestMethod]

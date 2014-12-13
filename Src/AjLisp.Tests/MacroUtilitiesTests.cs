@@ -47,7 +47,7 @@
         [TestMethod]
         public void ShouldExpandUnquotedSymbol()
         {
-            Parser parser = new Parser("(comma x)");
+            Parser parser = new Parser("(unquote x)");
             object list = parser.Compile();
             ValueEnvironment environment = new ValueEnvironment();
 
@@ -63,7 +63,7 @@
         [TestMethod]
         public void ShouldExpandUnquotedSymbolInList()
         {
-            Parser parser = new Parser("(1 (comma x) 3)");
+            Parser parser = new Parser("(1 (unquote x) 3)");
             object list = parser.Compile();
             ValueEnvironment environment = new ValueEnvironment();
 
@@ -85,7 +85,7 @@
         [TestMethod]
         public void ShouldExpandImplicitUnquotedSymbolInList()
         {
-            Parser parser = new Parser("(1 ,x 3)");
+            Parser parser = new Parser("(1 ~x 3)");
             object list = parser.Compile();
             ValueEnvironment environment = new ValueEnvironment();
 
@@ -107,7 +107,7 @@
         [TestMethod]
         public void ShouldExpandUnquotedSplicingSymbolInList()
         {
-            Parser parser = new Parser("(2 3) (1 (comma-at x) 4)");
+            Parser parser = new Parser("(2 3) (1 (unquote-splice x) 4)");
             ValueEnvironment environment = new ValueEnvironment();
 
             environment.SetValue("x", parser.Compile());

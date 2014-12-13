@@ -92,11 +92,11 @@ namespace AjLisp.Compiler
                 if (token.Value.Equals("`"))
                     return new List(new Identifier("backquote"), new List(this.CompileTerm()));
 
-                if (token.Value.Equals(","))
-                    return new List(new Identifier("comma"), new List(this.CompileTerm()));
+                if (token.Value.Equals("~"))
+                    return new List(new Identifier("unquote"), new List(this.CompileTerm()));
 
-                if (token.Value.Equals(",@"))
-                    return new List(new Identifier("comma-at"), new List(this.CompileTerm()));
+                if (token.Value.Equals("~@"))
+                    return new List(new Identifier("unquote-splice"), new List(this.CompileTerm()));
 
                 return new Identifier((string)token.Value);
             }

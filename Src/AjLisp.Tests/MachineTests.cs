@@ -956,7 +956,7 @@
         {
             Machine machine = new Machine();
             machine.Environment.SetValue("x", 2);
-            object expression = machine.Evaluate("`(1 ,x 3)");
+            object expression = machine.Evaluate("`(1 ~x 3)");
             Assert.AreEqual("(1 2 3)", expression.ToString());
         }
 
@@ -965,7 +965,7 @@
         {
             Machine machine = new Machine();
             machine.Environment.SetValue("x", new List(2, new List(3)));
-            object expression = machine.Evaluate("`(1 ,@x 4)");
+            object expression = machine.Evaluate("`(1 ~@x 4)");
             Assert.AreEqual("(1 2 3 4)", expression.ToString());
         }
 

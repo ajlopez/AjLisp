@@ -59,7 +59,7 @@
             {
                 Identifier identifier = (Identifier)list.First;
 
-                if (identifier.Name.Equals("comma"))
+                if (identifier.Name.Equals("unquote"))
                     return true;
             }
 
@@ -78,7 +78,7 @@
             {
                 Identifier identifier = (Identifier)list.First;
 
-                if (identifier.Name.Equals("comma-at"))
+                if (identifier.Name.Equals("unquote-splice"))
                     return true;
             }
 
