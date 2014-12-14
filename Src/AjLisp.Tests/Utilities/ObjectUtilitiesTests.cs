@@ -68,6 +68,102 @@
         }
 
         [TestMethod]
+        public void GetListIndexedValueWithoutUsingIndex()
+        {
+            List<int> list = new List<int>();
+
+            try
+            {
+                ObjectUtilities.GetIndexedValue(list, new object[] { });
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOfType(ex, typeof(InvalidOperationException));
+            }
+        }
+
+        [TestMethod]
+        public void SetListIndexedValueWithoutUsingIndex()
+        {
+            List<int> list = new List<int>();
+
+            try
+            {
+                ObjectUtilities.SetIndexedValue(list, new object[] { }, 3);
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOfType(ex, typeof(InvalidOperationException));
+            }
+        }
+
+        [TestMethod]
+        public void GetDictionaryIndexedValueWithoutUsingIndex()
+        {
+            var dict = new Dictionary<string, int>();
+
+            try
+            {
+                ObjectUtilities.GetIndexedValue(dict, new object[] { });
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOfType(ex, typeof(InvalidOperationException));
+            }
+        }
+
+        [TestMethod]
+        public void SetDictionaryIndexedValueWithoutUsingIndex()
+        {
+            var dict = new Dictionary<string, int>();
+
+            try
+            {
+                ObjectUtilities.SetIndexedValue(dict, new object[] { }, 3);
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOfType(ex, typeof(InvalidOperationException));
+            }
+        }
+
+        [TestMethod]
+        public void GetArrayIndexedValueWithoutUsingIndex()
+        {
+            var array = new int[3];
+
+            try
+            {
+                ObjectUtilities.GetIndexedValue(array, new object[] { });
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOfType(ex, typeof(InvalidOperationException));
+            }
+        }
+
+        [TestMethod]
+        public void SetArrayIndexedValueWithoutUsingIndex()
+        {
+            var array = new int[3];
+
+            try
+            {
+                ObjectUtilities.SetIndexedValue(array, new object[] { }, 3);
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOfType(ex, typeof(InvalidOperationException));
+            }
+        }
+
+        [TestMethod]
         public void GetIndexedValuesFromDictionary()
         {
             Dictionary<string, int> numbers = new Dictionary<string, int>();
@@ -125,6 +221,22 @@
             ObjectUtilities.SetIndexedValue(list, new object[] { 0 }, 1);
             ObjectUtilities.SetIndexedValue(list, new object[] { 1 }, 2);
             ObjectUtilities.SetIndexedValue(list, new object[] { 2 }, 3);
+
+            Assert.AreEqual(3, list.Count);
+            Assert.AreEqual(1, list[0]);
+            Assert.AreEqual(2, list[1]);
+            Assert.AreEqual(3, list[2]);
+        }
+
+        [TestMethod]
+        public void ChangeIndexedValueInList()
+        {
+            List<int> list = new List<int>();
+            list.Add(1);
+            list.Add(1);
+            list.Add(3);
+
+            ObjectUtilities.SetIndexedValue(list, new object[] { 1 }, 2);
 
             Assert.AreEqual(3, list.Count);
             Assert.AreEqual(1, list[0]);
